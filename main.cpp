@@ -1,27 +1,25 @@
-#include <iostream>
+#include "Audio.h"
+#include "drawer.h"
+#include "equation.h"
 #include <SDL.h>
 #include <SDL2/SDL_mixer.h>
-#include "equation.h"
-#include "drawer.h"
-#include "Audio.h"
+#include <iostream>
 
-using namespace std;
 
-SDL_Window* gWindow;
-SDL_Renderer* gRenderer;
+SDL_Window *gWindow;
+SDL_Renderer *gRenderer;
 drawer gameDraw(gWindow, gRenderer);
 Audio openSound;
 Audio overSound;
 Audio defuseSound;
 Audio inGameSound;
 
-void printIntro(){
+void printIntro() {
     gameDraw.initWindow();
     openSound.load("planting.wav");
     defuseSound.load("defusing.wav");
     openSound.play();
-    for (int i = 0; i < 8; i++)
-    {
+    for (int i = 0; i < 8; i++) {
         gameDraw.getImage("introScene1.png");
         SDL_Delay(100);
         gameDraw.getImage("introScene2.png");
@@ -36,32 +34,26 @@ void printIntro(){
     defuseSound.play();
     gameDraw.getImage("defusing.png");
     SDL_Delay(1300);
-    //Mix_FreeChunk( gScratch1 );
-    //soundEffect.stop();
     defuseSound.stop();
     openSound.stop();
     SDL_RenderClear(gRenderer);
-    //SDL_DestroyWindow(gWindow);
-    //SDL_Quit();
-    //gameDraw.reset();
 }
 
-string getStringEquation(equation eq)
-{
-    string finalString;
-    stringstream ss;
+std::string getStringEquation(equation eq) {
+    std::string finalString;
+    std::stringstream ss;
     ss << eq.num1;
     finalString = ss.str();
-    stringstream ss2;
+    std::stringstream ss2;
     ss2 << eq.num2;
     finalString = finalString + " + " + ss2.str();
-    stringstream ss3;
+    std::stringstream ss3;
     ss3 << eq.num3;
     finalString = finalString + " = " + ss3.str();
     return finalString;
 }
 
-void printEq(equation eq){
+void printEq(equation eq) {
     gameDraw.getImage("defusing.png");
     inGameSound.load("imgame.wav");
     inGameSound.play();
@@ -73,13 +65,12 @@ void printEq(equation eq){
     inGameSound.stop();
 }
 
-bool timer(){
+bool timer() {
 
     return true;
 }
 
-bool aKeyPressed(equation eq, int point)
-{
+bool aKeyPressed(equation eq, int point) {
     SDL_Event playerAns;
     char ansChar = ' ';
     Uint32 startTime = SDL_GetTicks();
@@ -88,29 +79,26 @@ bool aKeyPressed(equation eq, int point)
     int key;
     unsigned int timeLimit;
     int step = 46;
-    if (point < 5)
-    {
+    if (point < 5) {
         timeLimit = 2500;
         key = 30;
-    }
-    else{
+    } else {
         timeLimit = 1000;
         key = 10;
     }
-    while(SDL_GetTicks() - startTime <= timeLimit){
+    while (SDL_GetTicks() - startTime <= timeLimit) {
 
-        if (SDL_PollEvent(&playerAns) != 0 && playerAns.type == SDL_KEYDOWN){
-            if (playerAns.key.keysym.sym == SDLK_LEFT){
+        if (SDL_PollEvent(&playerAns) != 0 && playerAns.type == SDL_KEYDOWN) {
+            if (playerAns.key.keysym.sym == SDLK_LEFT) {
                 ansChar = 'N';
                 break;
             }
-            if (playerAns.key.keysym.sym == SDLK_RIGHT){
+            if (playerAns.key.keysym.sym == SDLK_RIGHT) {
                 ansChar = 'Y';
                 break;
             }
         }
-        if (countTick > key)
-        {
+        if (countTick > key) {
             lastWidth += step;
             key += countTick;
             countTick++;
@@ -119,13 +107,11 @@ bool aKeyPressed(equation eq, int point)
     }
     if (ansChar == eq.key) return true;
     return false;
-
 }
 
-string getPointString(int point)
-{
-    string finalString;
-    stringstream ss;
+std::string getPointString(int point) {
+    std::string finalString;
+    std::stringstream ss;
     ss << point;
     finalString = ss.str();
     return finalString;
@@ -133,51 +119,41 @@ string getPointString(int point)
 
 void gameOver(int point);
 
-bool timeDiscounting(equation eq, int point){
-    //while (timer()){}
-    if (aKeyPressed(eq, point)){
+bool timeDiscounting(equation eq, int point) {
+    if (aKeyPressed(eq, point)) {
         return true;
     }
     return false;
-    return false;
 }
 
-void startARound(int point)
-{
-    //gameDraw.reset();
-    if (point == 0){
+void startARound(int point) {
+    if (point == 0) {
         printIntro();
-    }
-    else{
+    } else {
         gameDraw.resetAfterARound();
     }
     int lv;
-    if (point > 5){
-        if (point > 10){
+    if (point > 5) {
+        if (point > 10) {
             lv = 3;
-        }
-        else lv = 2;
-    }
-    else lv = 1;
+        } else
+            lv = 2;
+    } else
+        lv = 1;
     equation eq;
     eq.getEquation(lv);
     printEq(eq);
-    if (timeDiscounting(eq, point)){
+    if (timeDiscounting(eq, point)) {
         point++;
         startARound(point);
-    }
-    else gameOver(point);
+    } else
+        gameOver(point);
     SDL_DestroyRenderer(gRenderer);
     SDL_DestroyWindow(gWindow);
     SDL_Quit();
 }
 
-void printMenu()
-{
-    /*Mix_Chunk *gScratch = nullptr;
-    gScratch = Mix_LoadWAV( "menuMusic.WAV" );
-    Mix_PlayChannel( -1, gScratch, 0 );*/
-    //soundEffect.play("menuMusic.WAV");
+void printMenu() {
     const int statButtonX = 40;
     const int startButtonY = 300;
     const int startButtonW = 145;
@@ -191,20 +167,19 @@ void printMenu()
     gameDraw.getButton("quitButton.png", quitButtonX, quitButtonY, quitButtonW, quitButtonH);
     bool quit = false;
     SDL_Event e;
-    while (!quit){
+    while (!quit) {
 
-        if (SDL_PollEvent(&e) != 0 && e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT){
+        if (SDL_PollEvent(&e) != 0 && e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT) {
             int mouseX = e.button.x;
             int mouseY = e.button.y;
             if ((mouseX > statButtonX) && (mouseX < statButtonX + startButtonW) &&
-                (mouseY > startButtonY) && (mouseY < startButtonY + startButtonH)){
+                (mouseY > startButtonY) && (mouseY < startButtonY + startButtonH)) {
                 SDL_RenderClear(gRenderer);
                 SDL_DestroyRenderer(gRenderer);
                 SDL_DestroyWindow(gWindow);
                 SDL_Quit();
                 startARound(0);
                 quit = true;
-
             }
             if ((mouseX > quitButtonX) && (mouseX < quitButtonX + quitButtonW) &&
                 (mouseY > quitButtonY) && (mouseY < quitButtonY + quitButtonH))
@@ -217,22 +192,17 @@ void printMenu()
     SDL_Quit();
 }
 
-int main(int argc, char* argv[])
-{
-    //printMenu();
+int main(int argc, char *argv[]) {
     gameDraw.initWindow();
     printMenu();
     return 0;
 }
 
-void gameOver(int point)
-{
+void gameOver(int point) {
     SDL_DestroyRenderer(gRenderer);
     SDL_DestroyWindow(gWindow);
     SDL_Quit();
     gameDraw.initWindow();
-    //cout << "Game over. Point: " << point;
-    //    gameOverSceneClass.play("gameOver.WAV
     overSound.load("gameOver.wav");
     overSound.play();
     gameDraw.getImage("endGame1.png");
@@ -245,13 +215,11 @@ void gameOver(int point)
     gameDraw.printScore(getPointString(point));
     bool quit = false;
     SDL_Event e;
-    while (!quit){
-        if (SDL_PollEvent(&e) != 0 && e.type == SDL_KEYDOWN){
-            if (e.key.keysym.sym == SDLK_ESCAPE){
+    while (!quit) {
+        if (SDL_PollEvent(&e) != 0 && e.type == SDL_KEYDOWN) {
+            if (e.key.keysym.sym == SDLK_ESCAPE) {
                 quit = true;
-            }
-            else
-            {
+            } else {
                 overSound.stop();
                 SDL_RenderClear(gRenderer);
                 SDL_DestroyRenderer(gRenderer);
@@ -259,7 +227,6 @@ void gameOver(int point)
                 SDL_Quit();
                 startARound(0);
                 quit = true;
-
             }
         }
     }

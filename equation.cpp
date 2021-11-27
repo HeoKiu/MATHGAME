@@ -7,15 +7,9 @@
 #include <ctime>
 
 
-equation::equation()
-{
+equation::equation(){}
 
-}
-
-equation::~equation()
-{
-    //dtor
-}
+equation::~equation(){}
 
 void equation::getEquation(int level)
 {
@@ -38,7 +32,6 @@ void equation::getEquation(int level)
     this->num1 = rand()%(maxBound) + 1;
     this->num2 = rand()%(maxBound) + 1;
     if (trueOrFalse){
-        diff = 0;
         this->num3 = this->num1 + this->num2;
     }
     else{
