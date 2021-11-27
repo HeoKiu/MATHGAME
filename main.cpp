@@ -65,6 +65,11 @@ void printEq(equation eq) {
     inGameSound.stop();
 }
 
+bool timer() {
+
+    return true;
+}
+
 bool aKeyPressed(equation eq, int point) {
     SDL_Event playerAns;
     char ansChar = ' ';

@@ -10,22 +10,6 @@
 SDL2/SDL.h
 -
 
-/home/duc/CLionProjects/GameSDL/drawer.cpp
-drawer.h
-/home/duc/CLionProjects/GameSDL/drawer.h
-SDL.h
--
-cstring
--
-bits/stdc++.h
--
-SDL2/SDL_image.h
--
-SDL2/SDL_ttf.h
--
-SDL2/SDL_mixer.h
--
-
 /home/duc/CLionProjects/GameSDL/drawer.h
 SDL.h
 -
@@ -47,18 +31,18 @@ cstring
 -
 
 /home/duc/CLionProjects/GameSDL/main.cpp
-Audio.h
-/home/duc/CLionProjects/GameSDL/Audio.h
-drawer.h
-/home/duc/CLionProjects/GameSDL/drawer.h
-equation.h
-/home/duc/CLionProjects/GameSDL/equation.h
+iostream
+-
 SDL.h
 -
 SDL2/SDL_mixer.h
 -
-iostream
--
+equation.h
+/home/duc/CLionProjects/GameSDL/equation.h
+drawer.h
+/home/duc/CLionProjects/GameSDL/drawer.h
+Audio.h
+/home/duc/CLionProjects/GameSDL/Audio.h
 
 /usr/include/SDL2/SDL.h
 SDL_main.h
