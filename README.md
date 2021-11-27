@@ -19,6 +19,8 @@ First change the directory to the "Game_MIPT_SDL2" folder:
 ```
 cd cmake-build-debug
 ```
+Now run make
+```
 make
 ```
 To run the project, type:
