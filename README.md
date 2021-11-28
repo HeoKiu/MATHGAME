@@ -15,7 +15,7 @@ You need the following tools to build this project:
 
 ## Build instructions
 
-First git clone the project and change the directory to the "Game_MIPT_SDL2" folder:
+First change the directory to the "Game_MIPT_SDL2" folder:
 ```
 cd cmake-build-debug
 ```
