@@ -20,7 +20,7 @@ void printIntro() {
     openSound.Load("planting.wav");
     defuseSound.Load("defusing.wav");
     openSound.Play();
-    for (int i = 0; i < 8; i++) {
+    for (size_t i = 0; i < 8; i++) {
         gameDraw.getImage("introScene1.png");
         SDL_Delay(100);
         gameDraw.getImage("introScene2.png");
@@ -66,20 +66,15 @@ void printEq(MathEquation eq) {
     inGameSound.Stop();
 }
 
-bool timer() {
-
-    return true;
-}
-
 bool aKeyPressed(MathEquation eq, int point) {
     SDL_Event playerAns;
     char ansChar = ' ';
     Uint32 startTime = SDL_GetTicks();
-    int lastWidth = 0;
-    int countTick = 0;
-    int key;
-    unsigned int timeLimit;
-    int step = 46;
+    size_t lastWidth = 0;
+    size_t countTick = 0;
+    size_t key;
+    size_t timeLimit;
+    size_t step = 46;
     if (point < 5) {
         timeLimit = 2500;
         key = 30;
@@ -110,7 +105,7 @@ bool aKeyPressed(MathEquation eq, int point) {
     return false;
 }
 
-std::string getPointString(int point) {
+std::string getPointString(size_t point) {
     std::string finalString;
     std::stringstream ss;
     ss << point;
@@ -118,9 +113,9 @@ std::string getPointString(int point) {
     return finalString;
 }
 
-void gameOver(int point);
+void gameOver(size_t point);
 
-bool timeDiscounting(MathEquation eq, int point) {
+bool timeDiscounting(MathEquation eq, size_t point) {
     if (aKeyPressed(eq, point)) {
         return true;
     }
