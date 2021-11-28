@@ -19,8 +19,6 @@ First git clone the project and change the directory to the "Game_MIPT_SDL2" fol
 ```
 cd cmake-build-debug
 ```
-Now run make
-```
 make
 ```
 To run the project, type:
