@@ -129,29 +129,53 @@ GameSDL/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/build
 .PHONY : GameSDL/fast
 
-Audio.o: Audio.cpp.o
-.PHONY : Audio.o
+MathEquation.o: MathEquation.cpp.o
+.PHONY : MathEquation.o
 
 # target to build an object file
-Audio.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/Audio.cpp.o
-.PHONY : Audio.cpp.o
+MathEquation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/MathEquation.cpp.o
+.PHONY : MathEquation.cpp.o
 
-Audio.i: Audio.cpp.i
-.PHONY : Audio.i
+MathEquation.i: MathEquation.cpp.i
+.PHONY : MathEquation.i
 
 # target to preprocess a source file
-Audio.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/Audio.cpp.i
-.PHONY : Audio.cpp.i
+MathEquation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/MathEquation.cpp.i
+.PHONY : MathEquation.cpp.i
 
-Audio.s: Audio.cpp.s
-.PHONY : Audio.s
+MathEquation.s: MathEquation.cpp.s
+.PHONY : MathEquation.s
 
 # target to generate assembly for a file
-Audio.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/Audio.cpp.s
-.PHONY : Audio.cpp.s
+MathEquation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/MathEquation.cpp.s
+.PHONY : MathEquation.cpp.s
+
+Sound.o: Sound.cpp.o
+.PHONY : Sound.o
+
+# target to build an object file
+Sound.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/Sound.cpp.o
+.PHONY : Sound.cpp.o
+
+Sound.i: Sound.cpp.i
+.PHONY : Sound.i
+
+# target to preprocess a source file
+Sound.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/Sound.cpp.i
+.PHONY : Sound.cpp.i
+
+Sound.s: Sound.cpp.s
+.PHONY : Sound.s
+
+# target to generate assembly for a file
+Sound.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/Sound.cpp.s
+.PHONY : Sound.cpp.s
 
 drawer.o: drawer.cpp.o
 .PHONY : drawer.o
@@ -176,30 +200,6 @@ drawer.s: drawer.cpp.s
 drawer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/drawer.cpp.s
 .PHONY : drawer.cpp.s
-
-equation.o: equation.cpp.o
-.PHONY : equation.o
-
-# target to build an object file
-equation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/equation.cpp.o
-.PHONY : equation.cpp.o
-
-equation.i: equation.cpp.i
-.PHONY : equation.i
-
-# target to preprocess a source file
-equation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/equation.cpp.i
-.PHONY : equation.cpp.i
-
-equation.s: equation.cpp.s
-.PHONY : equation.s
-
-# target to generate assembly for a file
-equation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/equation.cpp.s
-.PHONY : equation.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -234,15 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GameSDL"
-	@echo "... Audio.o"
-	@echo "... Audio.i"
-	@echo "... Audio.s"
+	@echo "... MathEquation.o"
+	@echo "... MathEquation.i"
+	@echo "... MathEquation.s"
+	@echo "... Sound.o"
+	@echo "... Sound.i"
+	@echo "... Sound.s"
 	@echo "... drawer.o"
 	@echo "... drawer.i"
 	@echo "... drawer.s"
-	@echo "... equation.o"
-	@echo "... equation.i"
-	@echo "... equation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

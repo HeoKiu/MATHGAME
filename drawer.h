@@ -1,15 +1,12 @@
-//
-// Created by duc on 27.11.2021.
-//
 
 #ifndef GAMESDL_DRAWER_H
 #define GAMESDL_DRAWER_H
+#include "MathEquation.h"
 #include <SDL.h>
-#include <bits/stdc++.h>
 #include <SDL2/SDL_image.h>
-#include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_mixer.h>
-#include "equation.h"
+#include <SDL2/SDL_ttf.h>
+#include <string>
 
 const int SCREEN_WIDTH = 400;
 const int SCREEN_HEIGHT = 600;
@@ -29,7 +26,6 @@ public:
     void printScore(std::string const point);
     void clearRender();
     void resetAfterARound();
-    void playMusic(std::string const path);
 protected:
 private:
 };

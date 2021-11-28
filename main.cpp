@@ -1,24 +1,25 @@
-#include "Audio.h"
+#include "MathEquation.h"
+#include "Sound.h"
 #include "drawer.h"
-#include "equation.h"
 #include <SDL.h>
 #include <SDL2/SDL_mixer.h>
 #include <iostream>
+#include <sstream>
 
 
 SDL_Window *gWindow;
 SDL_Renderer *gRenderer;
 drawer gameDraw(gWindow, gRenderer);
-Audio openSound;
-Audio overSound;
-Audio defuseSound;
-Audio inGameSound;
+Sound openSound;
+Sound overSound;
+Sound defuseSound;
+Sound inGameSound;
 
 void printIntro() {
     gameDraw.initWindow();
-    openSound.load("planting.wav");
-    defuseSound.load("defusing.wav");
-    openSound.play();
+    openSound.Load("planting.wav");
+    defuseSound.Load("defusing.wav");
+    openSound.Play();
     for (int i = 0; i < 8; i++) {
         gameDraw.getImage("introScene1.png");
         SDL_Delay(100);
@@ -31,38 +32,38 @@ void printIntro() {
     SDL_Delay(250);
     gameDraw.getImage("introScene5.png");
     SDL_Delay(1600);
-    defuseSound.play();
+    defuseSound.Play();
     gameDraw.getImage("defusing.png");
     SDL_Delay(1300);
-    defuseSound.stop();
-    openSound.stop();
+    defuseSound.Stop();
+    openSound.Stop();
     SDL_RenderClear(gRenderer);
 }
 
-std::string getStringEquation(equation eq) {
+std::string getStringEquation(MathEquation eq) {
     std::string finalString;
     std::stringstream ss;
-    ss << eq.num1;
+    ss << eq.first_number_;
     finalString = ss.str();
     std::stringstream ss2;
-    ss2 << eq.num2;
+    ss2 << eq.second_number_;
     finalString = finalString + " + " + ss2.str();
     std::stringstream ss3;
-    ss3 << eq.num3;
+    ss3 << eq.third_number_;
     finalString = finalString + " = " + ss3.str();
     return finalString;
 }
 
-void printEq(equation eq) {
+void printEq(MathEquation eq) {
     gameDraw.getImage("defusing.png");
-    inGameSound.load("imgame.wav");
-    inGameSound.play();
+    inGameSound.Load("imgame.wav");
+    inGameSound.Play();
     SDL_Delay(500);
     gameDraw.printEquation(getStringEquation(eq));
     gameDraw.getButton("wrong.png", 30, 400, 165, 145);
     gameDraw.getButton("right.png", 210, 400, 165, 145);
     gameDraw.clearRender();
-    inGameSound.stop();
+    inGameSound.Stop();
 }
 
 bool timer() {
@@ -70,7 +71,7 @@ bool timer() {
     return true;
 }
 
-bool aKeyPressed(equation eq, int point) {
+bool aKeyPressed(MathEquation eq, int point) {
     SDL_Event playerAns;
     char ansChar = ' ';
     Uint32 startTime = SDL_GetTicks();
@@ -105,7 +106,7 @@ bool aKeyPressed(equation eq, int point) {
         }
         countTick++;
     }
-    if (ansChar == eq.key) return true;
+    if (ansChar == eq.key_) return true;
     return false;
 }
 
@@ -119,7 +120,7 @@ std::string getPointString(int point) {
 
 void gameOver(int point);
 
-bool timeDiscounting(equation eq, int point) {
+bool timeDiscounting(MathEquation eq, int point) {
     if (aKeyPressed(eq, point)) {
         return true;
     }
@@ -140,7 +141,7 @@ void startARound(int point) {
             lv = 2;
     } else
         lv = 1;
-    equation eq;
+    MathEquation eq;
     eq.getEquation(lv);
     printEq(eq);
     if (timeDiscounting(eq, point)) {
@@ -203,8 +204,8 @@ void gameOver(int point) {
     SDL_DestroyWindow(gWindow);
     SDL_Quit();
     gameDraw.initWindow();
-    overSound.load("gameOver.wav");
-    overSound.play();
+    overSound.Load("gameOver.wav");
+    overSound.Play();
     gameDraw.getImage("endGame1.png");
     SDL_Delay(800);
     gameDraw.getImage("endGame2.png");
@@ -220,7 +221,7 @@ void gameOver(int point) {
             if (e.key.keysym.sym == SDLK_ESCAPE) {
                 quit = true;
             } else {
-                overSound.stop();
+                overSound.Stop();
                 SDL_RenderClear(gRenderer);
                 SDL_DestroyRenderer(gRenderer);
                 SDL_DestroyWindow(gWindow);
@@ -230,7 +231,7 @@ void gameOver(int point) {
             }
         }
     }
-    overSound.stop();
+    overSound.Stop();
     SDL_RenderClear(gRenderer);
     SDL_DestroyRenderer(gRenderer);
     SDL_DestroyWindow(gWindow);

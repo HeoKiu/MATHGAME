@@ -86,22 +86,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/duc/CLionProjects/GameSDL/Audio.cpp">
+		<Unit filename="/home/duc/CLionProjects/GameSDL/MathEquation.cpp">
 			<Option target="GameSDL"/>
 		</Unit>
-		<Unit filename="/home/duc/CLionProjects/GameSDL/Audio.h">
+		<Unit filename="/home/duc/CLionProjects/GameSDL/MathEquation.h">
+			<Option target="GameSDL"/>
+		</Unit>
+		<Unit filename="/home/duc/CLionProjects/GameSDL/Sound.cpp">
+			<Option target="GameSDL"/>
+		</Unit>
+		<Unit filename="/home/duc/CLionProjects/GameSDL/Sound.h">
 			<Option target="GameSDL"/>
 		</Unit>
 		<Unit filename="/home/duc/CLionProjects/GameSDL/drawer.cpp">
 			<Option target="GameSDL"/>
 		</Unit>
 		<Unit filename="/home/duc/CLionProjects/GameSDL/drawer.h">
-			<Option target="GameSDL"/>
-		</Unit>
-		<Unit filename="/home/duc/CLionProjects/GameSDL/equation.cpp">
-			<Option target="GameSDL"/>
-		</Unit>
-		<Unit filename="/home/duc/CLionProjects/GameSDL/equation.h">
 			<Option target="GameSDL"/>
 		</Unit>
 		<Unit filename="/home/duc/CLionProjects/GameSDL/main.cpp">
