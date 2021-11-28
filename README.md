@@ -16,7 +16,11 @@ You need the following tools to build this project:
 
 First change the directory to the "Game_MIPT_SDL2" folder:
 ```
-cd cmake-build-debug
+cd build
+```
+Then start cmake:
+```
+cmake ..
 ```
 Now run make
 ```
@@ -26,3 +30,4 @@ To run the project, type:
 ```
 ./GameSDL
 ```
+Have Fun !!!
