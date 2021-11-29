@@ -26,8 +26,6 @@ public:
     void printScore(std::string const point);
     void clearRender();
     void resetAfterARound();
-protected:
-private:
 };
 
 #endif//GAMESDL_DRAWER_H

@@ -16,11 +16,13 @@ Sound defuseSound;
 Sound inGameSound;
 
 void printIntro() {
+    size_t numberImages = 2;
+    const size_t delayTimeThird = 1500;
     gameDraw.initWindow();
     openSound.Load("planting.wav");
     defuseSound.Load("defusing.wav");
     openSound.Play();
-    for (int i = 0; i < 8; i++) {
+    for (size_t i = 0; i < numberImages; i++) {
         gameDraw.getImage("introScene1.png");
         SDL_Delay(100);
         gameDraw.getImage("introScene2.png");
@@ -64,11 +66,6 @@ void printEq(MathEquation eq) {
     gameDraw.getButton("right.png", 210, 400, 165, 145);
     gameDraw.clearRender();
     inGameSound.Stop();
-}
-
-bool timer() {
-
-    return true;
 }
 
 bool aKeyPressed(MathEquation eq, int point) {

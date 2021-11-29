@@ -2,20 +2,20 @@
 #include "Sound.h"
 
 Sound::~Sound() {
-    SDL_CloseAudioDevice(deviceId);
-    SDL_FreeWAV(wavBuffer);
+    SDL_CloseAudioDevice(audioDeviceId);
+    SDL_FreeWAV(audioBuf);
 }
 
 void Sound::Load(const char* filename) {
-    SDL_LoadWAV(filename, &wavSpec, &wavBuffer, &wavLength);
-    deviceId = SDL_OpenAudioDevice(nullptr, 0, &wavSpec, nullptr, 0);
+    SDL_LoadWAV(filename, &wavSpec, &audioBuf, &wavLength);
+    audioDeviceId = SDL_OpenAudioDevice(nullptr, 0, &wavSpec, nullptr, 0);
 }
 
 void Sound::Play() {
-    SDL_QueueAudio(deviceId, wavBuffer, wavLength);
-    SDL_PauseAudioDevice(deviceId, 0);
+    SDL_QueueAudio(audioDeviceId, audioBuf, wavLength);
+    SDL_PauseAudioDevice(audioDeviceId, 0);
 }
 
 void Sound::Stop() {
-    SDL_PauseAudioDevice(deviceId, 1);
+    SDL_PauseAudioDevice(audioDeviceId, 1);
 }

@@ -13,8 +13,8 @@ public:
 private:
     SDL_AudioSpec wavSpec;
     Uint32 wavLength;
-    Uint8 *wavBuffer;
-    SDL_AudioDeviceID deviceId;
+    Uint8 *audioBuf;
+    SDL_AudioDeviceID audioDeviceId;
 };
 
 

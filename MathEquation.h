@@ -14,10 +14,6 @@ public:
     int third_number_;
     virtual ~MathEquation();
     void getEquation(int level);
-
-protected:
-
-private:
 };
 
 

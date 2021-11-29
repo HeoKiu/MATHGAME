@@ -1,14 +1,12 @@
 
-
+#include <iostream>
+#include <cstring>
 #include "drawer.h"
 #include <SDL.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_mixer.h>
 #include <SDL2/SDL_ttf.h>
-#include <cstring>
-#include <iostream>
 
-using namespace std;
 
 drawer::drawer(SDL_Window *gWindow, SDL_Renderer *gRenderer) {
     gWindow_ = gWindow;
@@ -24,7 +22,7 @@ void drawer::initWindow() {
     gRenderer_ = SDL_CreateRenderer(gWindow_, -1, SDL_RENDERER_ACCELERATED);
 }
 
-void drawer::getImage(string const path) {
+void drawer::getImage(std::string const path) {
     SDL_Texture *newTexture = nullptr;
     SDL_Surface *loadedImgSurface = IMG_Load(path.c_str());
     if (loadedImgSurface == nullptr) std::cout << "Error loading Surface\n";
@@ -35,7 +33,7 @@ void drawer::getImage(string const path) {
     SDL_RenderPresent(gRenderer_);
 }
 
-void drawer::getButton(string const path, int x, int y, int w, int h) {
+void drawer::getButton(std::string const path, int x, int y, int w, int h) {
     SDL_Texture *NewTexture = nullptr;
     SDL_Surface *loadedImgSurface = IMG_Load(path.c_str());
     NewTexture = SDL_CreateTextureFromSurface(gRenderer_, loadedImgSurface);
@@ -50,7 +48,7 @@ void drawer::getButton(string const path, int x, int y, int w, int h) {
     SDL_FreeSurface(loadedImgSurface);
 }
 
-void drawer::printEquation(string const eq) {
+void drawer::printEquation(std::string const eq) {
     TTF_Font *font = TTF_OpenFont("DoctorSoos.ttf", 84);
     SDL_Color color = {255, 255, 255};
     SDL_Surface *surface = TTF_RenderText_Solid(font,
@@ -67,7 +65,7 @@ void drawer::printEquation(string const eq) {
     SDL_FreeSurface(surface);
 }
 
-void drawer::printScore(string const point) {
+void drawer::printScore(std::string const point) {
     TTF_Font *font = TTF_OpenFont("DoctorSoos.ttf", 48);
     SDL_Color color = {141, 136, 117};
     SDL_Surface *surface = TTF_RenderText_Solid(font,
