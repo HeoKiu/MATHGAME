@@ -26,7 +26,7 @@ Now run make
 ```
 make
 ```
-To run the project, run:
+To run the project, type:
 ```
 ./GameSDL
 ```
