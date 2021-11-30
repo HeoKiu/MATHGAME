@@ -14,7 +14,7 @@ You need the following tools to build this project:
 
 ## Build instructions
 
-First change the directory to the "Game_MIPT_SDL2" folder:
+Change the directory to the "Game_MIPT_SDL2" folder:
 ```
 cd build
 ```
