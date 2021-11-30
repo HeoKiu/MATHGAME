@@ -1,72 +1,78 @@
+#include "Drawer.h"
 #include "MathEquation.h"
-#include "Sound.h"
-#include "drawer.h"
+#include "Music.h"
 #include <SDL.h>
 #include <SDL2/SDL_mixer.h>
 #include <iostream>
 #include <sstream>
 
+SDL_Window *Window;
+SDL_Renderer *Renderer;
+Drawer gamePrint(Window, Renderer);
+Music openMusic;
+Music overMusic;
+Music defuseMusic;
+Music inGameMusic;
 
-SDL_Window *gWindow;
-SDL_Renderer *gRenderer;
-drawer gameDraw(gWindow, gRenderer);
-Sound openSound;
-Sound overSound;
-Sound defuseSound;
-Sound inGameSound;
-
-void printIntro() {
-    size_t numberImages = 2;
-    const size_t delayTimeThird = 1500;
-    gameDraw.initWindow();
-    openSound.Load("planting.wav");
-    defuseSound.Load("defusing.wav");
-    openSound.Play();
-    for (size_t i = 0; i < numberImages; i++) {
-        gameDraw.getImage("introScene1.png");
-        SDL_Delay(100);
-        gameDraw.getImage("introScene2.png");
-        SDL_Delay(100);
-    }
-    gameDraw.getImage("introScene3.png");
-    SDL_Delay(500);
-    gameDraw.getImage("introScene4.png");
-    SDL_Delay(250);
-    gameDraw.getImage("introScene5.png");
-    SDL_Delay(1600);
-    defuseSound.Play();
-    gameDraw.getImage("defusing.png");
-    SDL_Delay(1300);
-    defuseSound.Stop();
-    openSound.Stop();
-    SDL_RenderClear(gRenderer);
-}
-
-std::string getStringEquation(MathEquation eq) {
+std::string getStringEquation(MathEquation equation) {
+    //Generate the Equation we need
     std::string finalString;
-    std::stringstream ss;
-    ss << eq.first_number_;
-    finalString = ss.str();
-    std::stringstream ss2;
-    ss2 << eq.second_number_;
-    finalString = finalString + " + " + ss2.str();
-    std::stringstream ss3;
-    ss3 << eq.third_number_;
-    finalString = finalString + " = " + ss3.str();
+    std::stringstream secondValue;
+    std::stringstream firstValue;
+    std::stringstream thirdValue;
+    firstValue << equation.firstNumber;
+    finalString = firstValue.str();
+    secondValue << equation.secondNumber;
+    finalString = finalString + " + " + secondValue.str();
+    thirdValue << equation.thirdNumber;
+    finalString = finalString + " = " + thirdValue.str();
     return finalString;
 }
 
 void printEq(MathEquation eq) {
-    gameDraw.getImage("defusing.png");
-    inGameSound.Load("imgame.wav");
-    inGameSound.Play();
+    gamePrint.getImage("defusing.png");
+    inGameMusic.Load("imgame.wav");
+    inGameMusic.Play();
     SDL_Delay(500);
-    gameDraw.printEquation(getStringEquation(eq));
-    gameDraw.getButton("wrong.png", 30, 400, 165, 145);
-    gameDraw.getButton("right.png", 210, 400, 165, 145);
-    gameDraw.clearRender();
-    inGameSound.Stop();
+    gamePrint.printEquation(getStringEquation(eq));
+    gamePrint.getButton("wrong.png", 30, 400, 165, 145);
+    gamePrint.getButton("right.png", 210, 400, 165, 145);
+    gamePrint.clearRender();
+    inGameMusic.Stop();
 }
+
+void Intro() {
+    //Print intro with sound from source , the delay time is made to fit with the length of the sound
+    int numberImages = 8;
+    gamePrint.initWindow();
+    const size_t delayTimeIntro = 100;
+    const size_t delayTimeIntro2 = 500;
+    const size_t delayTimeIntro3 = 250;
+    const size_t delayTimeIntro4 = 1600;
+    const size_t delayTimeIntro5 = 1300;
+    openMusic.Load("planting.wav");
+    defuseMusic.Load("defusing.wav");
+    openMusic.Play();
+    while (numberImages-- > 0) {
+        gamePrint.getImage("introScene1.png");
+        SDL_Delay(delayTimeIntro);
+        gamePrint.getImage("introScene2.png");
+        SDL_Delay(delayTimeIntro);
+    }
+    gamePrint.getImage("introScene3.png");
+    SDL_Delay(delayTimeIntro2);
+    gamePrint.getImage("introScene4.png");
+    SDL_Delay(delayTimeIntro3);
+    gamePrint.getImage("introScene5.png");
+    SDL_Delay(delayTimeIntro4);
+    defuseMusic.Play();
+    gamePrint.getImage("defusing.png");
+    SDL_Delay(delayTimeIntro5);
+    defuseMusic.Stop();
+    openMusic.Stop();
+    SDL_RenderClear(Renderer);
+}
+
 
 bool aKeyPressed(MathEquation eq, int point) {
     SDL_Event playerAns;
@@ -77,13 +83,8 @@ bool aKeyPressed(MathEquation eq, int point) {
     int key;
     unsigned int timeLimit;
     int step = 46;
-    if (point < 5) {
-        timeLimit = 2500;
-        key = 30;
-    } else {
-        timeLimit = 1000;
-        key = 10;
-    }
+    key = 10;
+    timeLimit = 1500;
     while (SDL_GetTicks() - startTime <= timeLimit) {
 
         if (SDL_PollEvent(&playerAns) != 0 && playerAns.type == SDL_KEYDOWN) {
@@ -126,28 +127,20 @@ bool timeDiscounting(MathEquation eq, int point) {
 
 void startARound(int point) {
     if (point == 0) {
-        printIntro();
+        Intro();
     } else {
-        gameDraw.resetAfterARound();
+        gamePrint.resetAfterARound();
     }
-    int lv;
-    if (point > 5) {
-        if (point > 10) {
-            lv = 3;
-        } else
-            lv = 2;
-    } else
-        lv = 1;
     MathEquation eq;
-    eq.getEquation(lv);
+    eq.getEquation();
     printEq(eq);
     if (timeDiscounting(eq, point)) {
         point++;
         startARound(point);
     } else
         gameOver(point);
-    SDL_DestroyRenderer(gRenderer);
-    SDL_DestroyWindow(gWindow);
+    SDL_DestroyRenderer(Renderer);
+    SDL_DestroyWindow(Window);
     SDL_Quit();
 }
 
@@ -160,9 +153,9 @@ void printMenu() {
     const int quitButtonY = 300;
     const int quitButtonW = 145;
     const int quitButtonH = 62;
-    gameDraw.getImage("menu.png");
-    gameDraw.getButton("startButton.png", statButtonX, startButtonY, startButtonW, startButtonH);
-    gameDraw.getButton("quitButton.png", quitButtonX, quitButtonY, quitButtonW, quitButtonH);
+    gamePrint.getImage("menu.png");
+    gamePrint.getButton("startButton.png", statButtonX, startButtonY, startButtonW, startButtonH);
+    gamePrint.getButton("quitButton.png", quitButtonX, quitButtonY, quitButtonW, quitButtonH);
     bool quit = false;
     SDL_Event e;
     while (!quit) {
@@ -172,9 +165,9 @@ void printMenu() {
             int mouseY = e.button.y;
             if ((mouseX > statButtonX) && (mouseX < statButtonX + startButtonW) &&
                 (mouseY > startButtonY) && (mouseY < startButtonY + startButtonH)) {
-                SDL_RenderClear(gRenderer);
-                SDL_DestroyRenderer(gRenderer);
-                SDL_DestroyWindow(gWindow);
+                SDL_RenderClear(Renderer);
+                SDL_DestroyRenderer(Renderer);
+                SDL_DestroyWindow(Window);
                 SDL_Quit();
                 startARound(0);
                 quit = true;
@@ -184,33 +177,27 @@ void printMenu() {
                 quit = true;
         }
     }
-    SDL_RenderClear(gRenderer);
-    SDL_DestroyRenderer(gRenderer);
-    SDL_DestroyWindow(gWindow);
+    SDL_RenderClear(Renderer);
+    SDL_DestroyRenderer(Renderer);
+    SDL_DestroyWindow(Window);
     SDL_Quit();
-}
-
-int main(int argc, char *argv[]) {
-    gameDraw.initWindow();
-    printMenu();
-    return 0;
 }
 
 void gameOver(int point) {
-    SDL_DestroyRenderer(gRenderer);
-    SDL_DestroyWindow(gWindow);
+    SDL_DestroyRenderer(Renderer);
+    SDL_DestroyWindow(Window);
     SDL_Quit();
-    gameDraw.initWindow();
-    overSound.Load("gameOver.wav");
-    overSound.Play();
-    gameDraw.getImage("endGame1.png");
+    gamePrint.initWindow();
+    overMusic.Load("gameOver.wav");
+    overMusic.Play();
+    gamePrint.getImage("endGame1.png");
     SDL_Delay(800);
-    gameDraw.getImage("endGame2.png");
+    gamePrint.getImage("endGame2.png");
     SDL_Delay(800);
-    gameDraw.getImage("endGame3.png");
+    gamePrint.getImage("endGame3.png");
     SDL_Delay(800);
-    gameDraw.getImage("endGame4.png");
-    gameDraw.printScore(getPointString(point));
+    gamePrint.getImage("endGame4.png");
+    gamePrint.printScore(getPointString(point));
     bool quit = false;
     SDL_Event e;
     while (!quit) {
@@ -218,19 +205,25 @@ void gameOver(int point) {
             if (e.key.keysym.sym == SDLK_ESCAPE) {
                 quit = true;
             } else {
-                overSound.Stop();
-                SDL_RenderClear(gRenderer);
-                SDL_DestroyRenderer(gRenderer);
-                SDL_DestroyWindow(gWindow);
+                overMusic.Stop();
+                SDL_RenderClear(Renderer);
+                SDL_DestroyRenderer(Renderer);
+                SDL_DestroyWindow(Window);
                 SDL_Quit();
                 startARound(0);
                 quit = true;
             }
         }
     }
-    overSound.Stop();
-    SDL_RenderClear(gRenderer);
-    SDL_DestroyRenderer(gRenderer);
-    SDL_DestroyWindow(gWindow);
+    overMusic.Stop();
+    SDL_RenderClear(Renderer);
+    SDL_DestroyRenderer(Renderer);
+    SDL_DestroyWindow(Window);
     SDL_Quit();
+}
+
+int main(int argc, char *argv[]) {
+    gamePrint.initWindow();
+    printMenu();
+    return 0;
 }

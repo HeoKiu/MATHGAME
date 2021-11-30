@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/duc/CLionProjects/GameSDL/Drawer.cpp" "/home/duc/CLionProjects/GameSDL/cmake-build-debug/CMakeFiles/GameSDL.dir/Drawer.cpp.o"
   "/home/duc/CLionProjects/GameSDL/MathEquation.cpp" "/home/duc/CLionProjects/GameSDL/cmake-build-debug/CMakeFiles/GameSDL.dir/MathEquation.cpp.o"
-  "/home/duc/CLionProjects/GameSDL/Sound.cpp" "/home/duc/CLionProjects/GameSDL/cmake-build-debug/CMakeFiles/GameSDL.dir/Sound.cpp.o"
-  "/home/duc/CLionProjects/GameSDL/drawer.cpp" "/home/duc/CLionProjects/GameSDL/cmake-build-debug/CMakeFiles/GameSDL.dir/drawer.cpp.o"
+  "/home/duc/CLionProjects/GameSDL/Music.cpp" "/home/duc/CLionProjects/GameSDL/cmake-build-debug/CMakeFiles/GameSDL.dir/Music.cpp.o"
   "/home/duc/CLionProjects/GameSDL/main.cpp" "/home/duc/CLionProjects/GameSDL/cmake-build-debug/CMakeFiles/GameSDL.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/GameSDL.dir/Drawer.cpp.o"
   "CMakeFiles/GameSDL.dir/MathEquation.cpp.o"
-  "CMakeFiles/GameSDL.dir/Sound.cpp.o"
-  "CMakeFiles/GameSDL.dir/drawer.cpp.o"
+  "CMakeFiles/GameSDL.dir/Music.cpp.o"
   "CMakeFiles/GameSDL.dir/main.cpp.o"
   "GameSDL"
   "GameSDL.pdb"

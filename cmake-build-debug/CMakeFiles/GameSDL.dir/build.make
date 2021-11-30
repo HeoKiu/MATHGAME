@@ -92,46 +92,46 @@ CMakeFiles/GameSDL.dir/MathEquation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameSDL.dir/MathEquation.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duc/CLionProjects/GameSDL/MathEquation.cpp -o CMakeFiles/GameSDL.dir/MathEquation.cpp.s
 
-CMakeFiles/GameSDL.dir/drawer.cpp.o: CMakeFiles/GameSDL.dir/flags.make
-CMakeFiles/GameSDL.dir/drawer.cpp.o: ../drawer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duc/CLionProjects/GameSDL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameSDL.dir/drawer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameSDL.dir/drawer.cpp.o -c /home/duc/CLionProjects/GameSDL/drawer.cpp
+CMakeFiles/GameSDL.dir/Drawer.cpp.o: CMakeFiles/GameSDL.dir/flags.make
+CMakeFiles/GameSDL.dir/Drawer.cpp.o: ../Drawer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duc/CLionProjects/GameSDL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameSDL.dir/Drawer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameSDL.dir/Drawer.cpp.o -c /home/duc/CLionProjects/GameSDL/Drawer.cpp
 
-CMakeFiles/GameSDL.dir/drawer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameSDL.dir/drawer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duc/CLionProjects/GameSDL/drawer.cpp > CMakeFiles/GameSDL.dir/drawer.cpp.i
+CMakeFiles/GameSDL.dir/Drawer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameSDL.dir/Drawer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duc/CLionProjects/GameSDL/Drawer.cpp > CMakeFiles/GameSDL.dir/Drawer.cpp.i
 
-CMakeFiles/GameSDL.dir/drawer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameSDL.dir/drawer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duc/CLionProjects/GameSDL/drawer.cpp -o CMakeFiles/GameSDL.dir/drawer.cpp.s
+CMakeFiles/GameSDL.dir/Drawer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameSDL.dir/Drawer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duc/CLionProjects/GameSDL/Drawer.cpp -o CMakeFiles/GameSDL.dir/Drawer.cpp.s
 
-CMakeFiles/GameSDL.dir/Sound.cpp.o: CMakeFiles/GameSDL.dir/flags.make
-CMakeFiles/GameSDL.dir/Sound.cpp.o: ../Sound.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duc/CLionProjects/GameSDL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GameSDL.dir/Sound.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameSDL.dir/Sound.cpp.o -c /home/duc/CLionProjects/GameSDL/Sound.cpp
+CMakeFiles/GameSDL.dir/Music.cpp.o: CMakeFiles/GameSDL.dir/flags.make
+CMakeFiles/GameSDL.dir/Music.cpp.o: ../Music.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duc/CLionProjects/GameSDL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GameSDL.dir/Music.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameSDL.dir/Music.cpp.o -c /home/duc/CLionProjects/GameSDL/Music.cpp
 
-CMakeFiles/GameSDL.dir/Sound.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameSDL.dir/Sound.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duc/CLionProjects/GameSDL/Sound.cpp > CMakeFiles/GameSDL.dir/Sound.cpp.i
+CMakeFiles/GameSDL.dir/Music.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameSDL.dir/Music.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duc/CLionProjects/GameSDL/Music.cpp > CMakeFiles/GameSDL.dir/Music.cpp.i
 
-CMakeFiles/GameSDL.dir/Sound.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameSDL.dir/Sound.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duc/CLionProjects/GameSDL/Sound.cpp -o CMakeFiles/GameSDL.dir/Sound.cpp.s
+CMakeFiles/GameSDL.dir/Music.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameSDL.dir/Music.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duc/CLionProjects/GameSDL/Music.cpp -o CMakeFiles/GameSDL.dir/Music.cpp.s
 
 # Object files for target GameSDL
 GameSDL_OBJECTS = \
 "CMakeFiles/GameSDL.dir/main.cpp.o" \
 "CMakeFiles/GameSDL.dir/MathEquation.cpp.o" \
-"CMakeFiles/GameSDL.dir/drawer.cpp.o" \
-"CMakeFiles/GameSDL.dir/Sound.cpp.o"
+"CMakeFiles/GameSDL.dir/Drawer.cpp.o" \
+"CMakeFiles/GameSDL.dir/Music.cpp.o"
 
 # External object files for target GameSDL
 GameSDL_EXTERNAL_OBJECTS =
 
 GameSDL: CMakeFiles/GameSDL.dir/main.cpp.o
 GameSDL: CMakeFiles/GameSDL.dir/MathEquation.cpp.o
-GameSDL: CMakeFiles/GameSDL.dir/drawer.cpp.o
-GameSDL: CMakeFiles/GameSDL.dir/Sound.cpp.o
+GameSDL: CMakeFiles/GameSDL.dir/Drawer.cpp.o
+GameSDL: CMakeFiles/GameSDL.dir/Music.cpp.o
 GameSDL: CMakeFiles/GameSDL.dir/build.make
 GameSDL: /usr/lib/x86_64-linux-gnu/libSDL2_image.so
 GameSDL: /usr/lib/x86_64-linux-gnu/libSDL2_mixer.so

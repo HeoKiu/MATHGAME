@@ -12,12 +12,11 @@ const int SCREEN_WIDTH = 400;
 const int SCREEN_HEIGHT = 600;
 const std::string gameName = "Quick Maths";
 
-class drawer
-{
-    SDL_Window* gWindow_;
-    SDL_Renderer* gRenderer_;
+class Drawer {
+    SDL_Window* Window_;
+    SDL_Renderer* Renderer_;
 public:
-    drawer(SDL_Window* gWindow, SDL_Renderer* gRenderer);
+    Drawer(SDL_Window* Window, SDL_Renderer* Renderer);
     void initWindow();
     void getImage(std::string const path);
     void getButton(std::string const path, int x, int y, int w, int h);

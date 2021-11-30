@@ -18,17 +18,17 @@ ctime
 cstring
 -
 
-/home/duc/CLionProjects/GameSDL/Sound.cpp
-Sound.h
-/home/duc/CLionProjects/GameSDL/Sound.h
+/home/duc/CLionProjects/GameSDL/Music.cpp
+Music.h
+/home/duc/CLionProjects/GameSDL/Music.h
 
-/home/duc/CLionProjects/GameSDL/Sound.h
+/home/duc/CLionProjects/GameSDL/Music.h
 SDL2/SDL.h
 -
 
-/home/duc/CLionProjects/GameSDL/drawer.cpp
-drawer.h
-/home/duc/CLionProjects/GameSDL/drawer.h
+/home/duc/CLionProjects/GameSDL/Drawer.cpp
+Drawer.h
+/home/duc/CLionProjects/GameSDL/Drawer.h
 SDL.h
 -
 SDL2/SDL_image.h
@@ -42,7 +42,7 @@ cstring
 iostream
 -
 
-/home/duc/CLionProjects/GameSDL/drawer.h
+/home/duc/CLionProjects/GameSDL/Drawer.h
 MathEquation.h
 /home/duc/CLionProjects/GameSDL/MathEquation.h
 SDL.h
@@ -59,10 +59,10 @@ string
 /home/duc/CLionProjects/GameSDL/main.cpp
 MathEquation.h
 /home/duc/CLionProjects/GameSDL/MathEquation.h
-Sound.h
-/home/duc/CLionProjects/GameSDL/Sound.h
-drawer.h
-/home/duc/CLionProjects/GameSDL/drawer.h
+Music.h
+/home/duc/CLionProjects/GameSDL/Music.h
+Drawer.h
+/home/duc/CLionProjects/GameSDL/Drawer.h
 SDL.h
 -
 SDL2/SDL_mixer.h

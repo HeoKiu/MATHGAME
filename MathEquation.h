@@ -9,11 +9,11 @@ class MathEquation {
 public:
     MathEquation();
     char key_;
-    int first_number_;
-    int second_number_;
-    int third_number_;
+    int firstNumber;
+    int secondNumber;
+    int thirdNumber;
     virtual ~MathEquation();
-    void getEquation(int level);
+    const void getEquation();
 };
 
 

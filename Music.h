@@ -1,12 +1,12 @@
 
-#ifndef GAMESDL_SOUND_H
-#define GAMESDL_SOUND_H
+#ifndef GAMESDL_MUSIC_H
+#define GAMESDL_MUSIC_H
 
 #include <SDL2/SDL.h>
 
-class Sound {
+class Music {
 public:
-    ~Sound();
+    ~Music();
     void Load(const char* filename);
     void Play();
     void Stop();
@@ -18,4 +18,4 @@ private:
 };
 
 
-#endif//GAMESDL_SOUND_H
+#endif//GAMESDL_MUSIC_H
