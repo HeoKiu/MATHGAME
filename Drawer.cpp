@@ -25,7 +25,6 @@ void Drawer::initWindow() {
 void Drawer::getImage(std::string const path) {
     SDL_Texture *newTexture = nullptr;
     SDL_Surface *loadedImgSurface = IMG_Load(path.c_str());
-    if (loadedImgSurface == nullptr) std::cout << "Error loading Surface\n";
     newTexture = SDL_CreateTextureFromSurface(Renderer_, loadedImgSurface);
     SDL_FreeSurface(loadedImgSurface);
     SDL_RenderClear(Renderer_);
@@ -33,15 +32,15 @@ void Drawer::getImage(std::string const path) {
     SDL_RenderPresent(Renderer_);
 }
 
-void Drawer::getButton(std::string const path, int x, int y, int w, int h) {
+void Drawer::getButton(std::string const path, size_t xCoorinate, size_t yCoordinate, size_t wCoordinate, size_t hCoordinate) {
     SDL_Texture *NewTexture = nullptr;
     SDL_Surface *loadedImgSurface = IMG_Load(path.c_str());
     NewTexture = SDL_CreateTextureFromSurface(Renderer_, loadedImgSurface);
     SDL_Rect viewPort;
-    viewPort.x = x;
-    viewPort.y = y;
-    viewPort.w = w;
-    viewPort.h = h;
+    viewPort.x = xCoorinate;
+    viewPort.y = yCoordinate;
+    viewPort.w = wCoordinate;
+    viewPort.h = hCoordinate;
     SDL_RenderSetViewport(Renderer_, &viewPort);
     SDL_RenderCopy(Renderer_, NewTexture, NULL, NULL);
     SDL_RenderPresent(Renderer_);
@@ -77,9 +76,7 @@ void Drawer::printScore(std::string const point) {
     int texW = 0;
     int texH = 0;
     SDL_QueryTexture(texture, NULL, NULL, &texW, &texH);
-    //SDL_SetTextureAlphaMod(texture, 1);
     SDL_Rect dstrect = {scoreX, scoreY, texW, texH};
-    //SDL_SetTextureAlphaMod(texture, 1);
     SDL_RenderCopy(Renderer_, texture, NULL, &dstrect);
     SDL_RenderPresent(Renderer_);
     SDL_DestroyTexture(texture);

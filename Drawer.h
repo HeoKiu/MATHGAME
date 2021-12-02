@@ -19,7 +19,7 @@ public:
     Drawer(SDL_Window* Window, SDL_Renderer* Renderer);
     void initWindow();
     void getImage(std::string const path);
-    void getButton(std::string const path, int x, int y, int w, int h);
+    void getButton(std::string const path, size_t xCoordinate, size_t yCoordinate, size_t wCoordinate, size_t hCoordinate);
     void printEquation(std::string const eq);
     void drawTimeLeft(int beginningWidth);
     void printScore(std::string const point);

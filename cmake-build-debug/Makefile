@@ -153,6 +153,30 @@ Drawer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/Drawer.cpp.s
 .PHONY : Drawer.cpp.s
 
+Game.o: Game.cpp.o
+.PHONY : Game.o
+
+# target to build an object file
+Game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/Game.cpp.o
+.PHONY : Game.cpp.o
+
+Game.i: Game.cpp.i
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
 MathEquation.o: MathEquation.cpp.o
 .PHONY : MathEquation.o
 
@@ -201,30 +225,6 @@ Music.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/Music.cpp.s
 .PHONY : Music.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -237,15 +237,15 @@ help:
 	@echo "... Drawer.o"
 	@echo "... Drawer.i"
 	@echo "... Drawer.s"
+	@echo "... Game.o"
+	@echo "... Game.i"
+	@echo "... Game.s"
 	@echo "... MathEquation.o"
 	@echo "... MathEquation.i"
 	@echo "... MathEquation.s"
 	@echo "... Music.o"
 	@echo "... Music.i"
 	@echo "... Music.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

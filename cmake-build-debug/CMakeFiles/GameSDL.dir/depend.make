@@ -49,17 +49,12 @@ CMakeFiles/GameSDL.dir/Drawer.cpp.o: \
  /usr/include/SDL2/SDL_video.h \
  /usr/include/SDL2/begin_code.h \
  /usr/include/SDL2/close_code.h
-CMakeFiles/GameSDL.dir/MathEquation.cpp.o: \
- ../MathEquation.cpp \
- ../MathEquation.h
-CMakeFiles/GameSDL.dir/Music.cpp.o: \
- ../Music.cpp \
- ../Music.h
-CMakeFiles/GameSDL.dir/main.cpp.o: \
+CMakeFiles/GameSDL.dir/Game.cpp.o: \
  ../Drawer.h \
+ ../Game.cpp \
+ ../Game.h \
  ../MathEquation.h \
  ../Music.h \
- ../main.cpp \
  /usr/include/SDL2/SDL.h \
  /usr/include/SDL2/SDL_assert.h \
  /usr/include/SDL2/SDL_atomic.h \
@@ -104,3 +99,9 @@ CMakeFiles/GameSDL.dir/main.cpp.o: \
  /usr/include/SDL2/SDL_video.h \
  /usr/include/SDL2/begin_code.h \
  /usr/include/SDL2/close_code.h
+CMakeFiles/GameSDL.dir/MathEquation.cpp.o: \
+ ../MathEquation.cpp \
+ ../MathEquation.h
+CMakeFiles/GameSDL.dir/Music.cpp.o: \
+ ../Music.cpp \
+ ../Music.h

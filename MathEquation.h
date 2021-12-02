@@ -4,6 +4,8 @@
 #define GAMESDL_MATHEQUATION_H
 
 #include <cstring>
+#include <string>
+#include <sstream>
 
 class MathEquation {
 public:

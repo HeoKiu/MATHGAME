@@ -5,6 +5,7 @@
 #include <SDL2/SDL_mixer.h>
 #include <iostream>
 #include <sstream>
+#include <vector>
 
 SDL_Window *Window;
 SDL_Renderer *Renderer;
@@ -15,7 +16,6 @@ Music defuseMusic;
 Music inGameMusic;
 
 std::string getStringEquation(MathEquation equation) {
-    //Generate the Equation we need
     std::string finalString;
     std::stringstream secondValue;
     std::stringstream firstValue;
@@ -30,13 +30,16 @@ std::string getStringEquation(MathEquation equation) {
 }
 
 void printEq(MathEquation eq) {
-    gamePrint.getImage("defusing.png");
+    const size_t delayTime = 500;
+    const std::vector<int> wrongButton{30, 400, 165, 145};
+    const std::vector<int> rightButoon{210, 400, 165, 145};
     inGameMusic.Load("imgame.wav");
+    gamePrint.getImage("defusing.png");
     inGameMusic.Play();
-    SDL_Delay(500);
+    SDL_Delay(delayTime);
     gamePrint.printEquation(getStringEquation(eq));
-    gamePrint.getButton("wrong.png", 30, 400, 165, 145);
-    gamePrint.getButton("right.png", 210, 400, 165, 145);
+    gamePrint.getButton("wrong.png", wrongButton[1], wrongButton[2], wrongButton[3], wrongButton[4]);
+    gamePrint.getButton("right.png", rightButoon[1], rightButoon[2], rightButoon[3], rightButoon[4]);
     gamePrint.clearRender();
     inGameMusic.Stop();
 }
@@ -74,11 +77,10 @@ void Intro() {
 }
 
 
-bool aKeyPressed(MathEquation eq, int point) {
-    SDL_Event playerAns;
+bool aKeyPressed(MathEquation eq) {
+    SDL_Event playerInput;
     char ansChar = ' ';
     Uint32 startTime = SDL_GetTicks();
-    int lastWidth = 0;
     int countTick = 0;
     int key;
     unsigned int timeLimit;
@@ -86,19 +88,17 @@ bool aKeyPressed(MathEquation eq, int point) {
     key = 10;
     timeLimit = 1500;
     while (SDL_GetTicks() - startTime <= timeLimit) {
-
-        if (SDL_PollEvent(&playerAns) != 0 && playerAns.type == SDL_KEYDOWN) {
-            if (playerAns.key.keysym.sym == SDLK_LEFT) {
+        if (SDL_PollEvent(&playerInput) != 0 && playerInput.type == SDL_KEYDOWN) {
+            if (playerInput.key.keysym.sym == SDLK_LEFT) {
                 ansChar = 'N';
                 break;
             }
-            if (playerAns.key.keysym.sym == SDLK_RIGHT) {
+            if (playerInput.key.keysym.sym == SDLK_RIGHT) {
                 ansChar = 'Y';
                 break;
             }
         }
         if (countTick > key) {
-            lastWidth += step;
             key += countTick;
             countTick++;
         }
@@ -119,10 +119,10 @@ std::string getPointString(int point) {
 void gameOver(int point);
 
 bool timeDiscounting(MathEquation eq, int point) {
-    if (aKeyPressed(eq, point)) {
-        return true;
+    if (!aKeyPressed(eq)) {
+        return false;
     }
-    return false;
+    return true;
 }
 
 void startARound(int point) {
@@ -159,7 +159,6 @@ void printMenu() {
     bool quit = false;
     SDL_Event e;
     while (!quit) {
-
         if (SDL_PollEvent(&e) != 0 && e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT) {
             int mouseX = e.button.x;
             int mouseY = e.button.y;
@@ -220,10 +219,4 @@ void gameOver(int point) {
     SDL_DestroyRenderer(Renderer);
     SDL_DestroyWindow(Window);
     SDL_Quit();
-}
-
-int main(int argc, char *argv[]) {
-    gamePrint.initWindow();
-    printMenu();
-    return 0;
 }

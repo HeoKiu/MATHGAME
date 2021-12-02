@@ -92,6 +92,12 @@
 		<Unit filename="/home/duc/CLionProjects/GameSDL/Drawer.h">
 			<Option target="GameSDL"/>
 		</Unit>
+		<Unit filename="/home/duc/CLionProjects/GameSDL/Game.cpp">
+			<Option target="GameSDL"/>
+		</Unit>
+		<Unit filename="/home/duc/CLionProjects/GameSDL/Game.h">
+			<Option target="GameSDL"/>
+		</Unit>
 		<Unit filename="/home/duc/CLionProjects/GameSDL/MathEquation.cpp">
 			<Option target="GameSDL"/>
 		</Unit>
@@ -102,9 +108,6 @@
 			<Option target="GameSDL"/>
 		</Unit>
 		<Unit filename="/home/duc/CLionProjects/GameSDL/Music.h">
-			<Option target="GameSDL"/>
-		</Unit>
-		<Unit filename="/home/duc/CLionProjects/GameSDL/main.cpp">
 			<Option target="GameSDL"/>
 		</Unit>
 		<Unit filename="/home/duc/CLionProjects/GameSDL/CMakeLists.txt">
