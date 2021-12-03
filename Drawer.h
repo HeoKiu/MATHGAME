@@ -13,6 +13,7 @@ const int SCREEN_HEIGHT = 600;
 const std::string gameName = "Quick Maths";
 
 class Drawer {
+private:
     SDL_Window* Window_;
     SDL_Renderer* Renderer_;
 public:

@@ -23,7 +23,7 @@ void Drawer::initWindow() {
 }
 
 void Drawer::getImage(std::string const path) {
-    SDL_Texture *newTexture = nullptr;
+    SDL_Texture *newTexture;
     SDL_Surface *loadedImgSurface = IMG_Load(path.c_str());
     newTexture = SDL_CreateTextureFromSurface(Renderer_, loadedImgSurface);
     SDL_FreeSurface(loadedImgSurface);
@@ -33,7 +33,7 @@ void Drawer::getImage(std::string const path) {
 }
 
 void Drawer::getButton(std::string const path, size_t xCoorinate, size_t yCoordinate, size_t wCoordinate, size_t hCoordinate) {
-    SDL_Texture *NewTexture = nullptr;
+    SDL_Texture *NewTexture;
     SDL_Surface *loadedImgSurface = IMG_Load(path.c_str());
     NewTexture = SDL_CreateTextureFromSurface(Renderer_, loadedImgSurface);
     SDL_Rect viewPort;
@@ -42,7 +42,7 @@ void Drawer::getButton(std::string const path, size_t xCoorinate, size_t yCoordi
     viewPort.w = wCoordinate;
     viewPort.h = hCoordinate;
     SDL_RenderSetViewport(Renderer_, &viewPort);
-    SDL_RenderCopy(Renderer_, NewTexture, NULL, NULL);
+    SDL_RenderCopy(Renderer_, NewTexture, nullptr, nullptr);
     SDL_RenderPresent(Renderer_);
     SDL_FreeSurface(loadedImgSurface);
 }
@@ -56,15 +56,15 @@ void Drawer::printEquation(std::string const eq) {
                                                         surface);
     int texW = 0;
     int texH = 0;
-    SDL_QueryTexture(texture, NULL, NULL, &texW, &texH);
+    SDL_QueryTexture(texture, nullptr, nullptr, &texW, &texH);
     SDL_Rect dstrect = {65, 250, texW, texH};
-    SDL_RenderCopy(Renderer_, texture, NULL, &dstrect);
+    SDL_RenderCopy(Renderer_, texture, nullptr, &dstrect);
     SDL_RenderPresent(Renderer_);
     SDL_DestroyTexture(texture);
     SDL_FreeSurface(surface);
 }
 
-void Drawer::printScore(std::string const point) {
+void Drawer::printScore(std::string point) {
     TTF_Font *font = TTF_OpenFont("DoctorSoos.ttf", 48);
     SDL_Color color = {141, 136, 117};
     SDL_Surface *surface = TTF_RenderText_Solid(font,
@@ -75,9 +75,9 @@ void Drawer::printScore(std::string const point) {
     const int scoreY = 85;
     int texW = 0;
     int texH = 0;
-    SDL_QueryTexture(texture, NULL, NULL, &texW, &texH);
+    SDL_QueryTexture(texture, nullptr, nullptr, &texW, &texH);
     SDL_Rect dstrect = {scoreX, scoreY, texW, texH};
-    SDL_RenderCopy(Renderer_, texture, NULL, &dstrect);
+    SDL_RenderCopy(Renderer_, texture, nullptr, &dstrect);
     SDL_RenderPresent(Renderer_);
     SDL_DestroyTexture(texture);
     SDL_FreeSurface(surface);

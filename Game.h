@@ -32,14 +32,14 @@ std::string getStringEquation(MathEquation equation) {
 void printEq(MathEquation eq) {
     const size_t delayTime = 500;
     const std::vector<int> wrongButton{30, 400, 165, 145};
-    const std::vector<int> rightButoon{210, 400, 165, 145};
+    const std::vector<int> rightButton{210, 400, 165, 145};
     inGameMusic.Load("imgame.wav");
     gamePrint.getImage("defusing.png");
     inGameMusic.Play();
     SDL_Delay(delayTime);
     gamePrint.printEquation(getStringEquation(eq));
     gamePrint.getButton("wrong.png", wrongButton[1], wrongButton[2], wrongButton[3], wrongButton[4]);
-    gamePrint.getButton("right.png", rightButoon[1], rightButoon[2], rightButoon[3], rightButoon[4]);
+    gamePrint.getButton("right.png", rightButton[1], rightButton[2], rightButton[3], rightButton[4]);
     gamePrint.clearRender();
     inGameMusic.Stop();
 }
@@ -84,11 +84,10 @@ bool aKeyPressed(MathEquation eq) {
     int countTick = 0;
     int key;
     unsigned int timeLimit;
-    int step = 46;
     key = 10;
     timeLimit = 1500;
     while (SDL_GetTicks() - startTime <= timeLimit) {
-        if (SDL_PollEvent(&playerInput) != 0 && playerInput.type == SDL_KEYDOWN) {
+        if (playerInput.type == SDL_KEYDOWN && SDL_PollEvent(&playerInput) != 0) {
             if (playerInput.key.keysym.sym == SDLK_LEFT) {
                 ansChar = 'N';
                 break;
@@ -99,12 +98,12 @@ bool aKeyPressed(MathEquation eq) {
             }
         }
         if (countTick > key) {
-            key += countTick;
+            key = key + countTick;
             countTick++;
         }
         countTick++;
     }
-    if (ansChar == eq.key_) return true;
+    if (ansChar == eq.key_) { return true; }
     return false;
 }
 
@@ -125,7 +124,7 @@ bool timeDiscounting(MathEquation eq, int point) {
     return true;
 }
 
-void startARound(int point) {
+void newRound(int point) {
     if (point == 0) {
         Intro();
     } else {
@@ -136,7 +135,7 @@ void startARound(int point) {
     printEq(eq);
     if (timeDiscounting(eq, point)) {
         point++;
-        startARound(point);
+        newRound(point);
     } else
         gameOver(point);
     SDL_DestroyRenderer(Renderer);
@@ -168,7 +167,7 @@ void printMenu() {
                 SDL_DestroyRenderer(Renderer);
                 SDL_DestroyWindow(Window);
                 SDL_Quit();
-                startARound(0);
+                newRound(0);
                 quit = true;
             }
             if ((mouseX > quitButtonX) && (mouseX < quitButtonX + quitButtonW) &&
@@ -209,7 +208,7 @@ void gameOver(int point) {
                 SDL_DestroyRenderer(Renderer);
                 SDL_DestroyWindow(Window);
                 SDL_Quit();
-                startARound(0);
+                newRound(0);
                 quit = true;
             }
         }
