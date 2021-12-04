@@ -18,4 +18,6 @@ void Music::Play() {
 
 void Music::Stop() {
     SDL_PauseAudioDevice(audioDeviceId, 1);
+    SDL_CloseAudioDevice(audioDeviceId);
 }
+

@@ -32,20 +32,19 @@ std::string getStringEquation(MathEquation equation) {
 void printEq(MathEquation eq) {
     const size_t delayTime = 500;
     const std::vector<int> wrongButton{30, 400, 165, 145};
-    const std::vector<int> rightButton{210, 400, 165, 145};
+    const std::vector<int> rightButoon{210, 400, 165, 145};
     inGameMusic.Load("imgame.wav");
     gamePrint.getImage("defusing.png");
     inGameMusic.Play();
     SDL_Delay(delayTime);
     gamePrint.printEquation(getStringEquation(eq));
-    gamePrint.getButton("wrong.png", wrongButton[1], wrongButton[2], wrongButton[3], wrongButton[4]);
-    gamePrint.getButton("right.png", rightButton[1], rightButton[2], rightButton[3], rightButton[4]);
+    gamePrint.getButton("wrong.png", wrongButton[0], wrongButton[1], wrongButton[2], wrongButton[3]);
+    gamePrint.getButton("right.png", rightButoon[0], rightButoon[1], rightButoon[2], rightButoon[3]);
     gamePrint.clearRender();
     inGameMusic.Stop();
 }
 
 void Intro() {
-    //Print intro with sound from source , the delay time is made to fit with the length of the sound
     int numberImages = 8;
     gamePrint.initWindow();
     const size_t delayTimeIntro = 100;
@@ -87,7 +86,7 @@ bool aKeyPressed(MathEquation eq) {
     key = 10;
     timeLimit = 1500;
     while (SDL_GetTicks() - startTime <= timeLimit) {
-        if (playerInput.type == SDL_KEYDOWN && SDL_PollEvent(&playerInput) != 0) {
+        if (SDL_PollEvent(&playerInput) != 0 && playerInput.type == SDL_KEYDOWN) {
             if (playerInput.key.keysym.sym == SDLK_LEFT) {
                 ansChar = 'N';
                 break;
@@ -98,12 +97,12 @@ bool aKeyPressed(MathEquation eq) {
             }
         }
         if (countTick > key) {
-            key = key + countTick;
+            key += countTick;
             countTick++;
         }
         countTick++;
     }
-    if (ansChar == eq.key_) { return true; }
+    if (ansChar == eq.key_) return true;
     return false;
 }
 
@@ -123,8 +122,7 @@ bool timeDiscounting(MathEquation eq, int point) {
     }
     return true;
 }
-
-void newRound(int point) {
+void startARound(int point) {
     if (point == 0) {
         Intro();
     } else {
@@ -135,7 +133,7 @@ void newRound(int point) {
     printEq(eq);
     if (timeDiscounting(eq, point)) {
         point++;
-        newRound(point);
+        startARound(point);
     } else
         gameOver(point);
     SDL_DestroyRenderer(Renderer);
@@ -144,34 +142,28 @@ void newRound(int point) {
 }
 
 void printMenu() {
-    const int statButtonX = 40;
-    const int startButtonY = 300;
-    const int startButtonW = 145;
-    const int startButtonH = 63;
-    const int quitButtonX = 210;
-    const int quitButtonY = 300;
-    const int quitButtonW = 145;
-    const int quitButtonH = 62;
+    const std::vector<int> startButton{40, 300, 145, 63};
+    const std::vector<int> quitButton{210, 300, 145, 62};
     gamePrint.getImage("menu.png");
-    gamePrint.getButton("startButton.png", statButtonX, startButtonY, startButtonW, startButtonH);
-    gamePrint.getButton("quitButton.png", quitButtonX, quitButtonY, quitButtonW, quitButtonH);
+    gamePrint.getButton("startButton.png", startButton[0], startButton[1], startButton[2], startButton[3]);
+    gamePrint.getButton("quitButton.png", quitButton[0], quitButton[1], quitButton[2], quitButton[3]);
     bool quit = false;
     SDL_Event e;
     while (!quit) {
         if (SDL_PollEvent(&e) != 0 && e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT) {
             int mouseX = e.button.x;
             int mouseY = e.button.y;
-            if ((mouseX > statButtonX) && (mouseX < statButtonX + startButtonW) &&
-                (mouseY > startButtonY) && (mouseY < startButtonY + startButtonH)) {
+            if ((mouseX > startButton[0]) && (mouseX < startButton[0] + startButton[2]) &&
+                (mouseY > startButton[1]) && (mouseY < startButton[1] + startButton[3])) {
                 SDL_RenderClear(Renderer);
                 SDL_DestroyRenderer(Renderer);
                 SDL_DestroyWindow(Window);
                 SDL_Quit();
-                newRound(0);
+                startARound(0);
                 quit = true;
             }
-            if ((mouseX > quitButtonX) && (mouseX < quitButtonX + quitButtonW) &&
-                (mouseY > quitButtonY) && (mouseY < quitButtonY + quitButtonH))
+            if ((mouseX > quitButton[0]) && (mouseX < quitButton[0] + quitButton[2]) &&
+                (mouseY > quitButton[1]) && (mouseY < quitButton[1] + quitButton[3]))
                 quit = true;
         }
     }
@@ -208,7 +200,7 @@ void gameOver(int point) {
                 SDL_DestroyRenderer(Renderer);
                 SDL_DestroyWindow(Window);
                 SDL_Quit();
-                newRound(0);
+                startARound(0);
                 quit = true;
             }
         }
