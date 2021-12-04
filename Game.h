@@ -47,29 +47,25 @@ void printEq(MathEquation eq) {
 void Intro() {
     int numberImages = 8;
     gamePrint.initWindow();
-    const size_t delayTimeIntro = 100;
-    const size_t delayTimeIntro2 = 500;
-    const size_t delayTimeIntro3 = 250;
-    const size_t delayTimeIntro4 = 1600;
-    const size_t delayTimeIntro5 = 1300;
+    const std::vector<int> delayTime{100, 500, 250, 1600, 1300};
     openMusic.Load("planting.wav");
     defuseMusic.Load("defusing.wav");
     openMusic.Play();
     while (numberImages-- > 0) {
         gamePrint.getImage("introScene1.png");
-        SDL_Delay(delayTimeIntro);
+        SDL_Delay(delayTime[0]);
         gamePrint.getImage("introScene2.png");
-        SDL_Delay(delayTimeIntro);
+        SDL_Delay(delayTime[0]);
     }
     gamePrint.getImage("introScene3.png");
-    SDL_Delay(delayTimeIntro2);
+    SDL_Delay(delayTime[1]);
     gamePrint.getImage("introScene4.png");
-    SDL_Delay(delayTimeIntro3);
+    SDL_Delay(delayTime[2]);
     gamePrint.getImage("introScene5.png");
-    SDL_Delay(delayTimeIntro4);
+    SDL_Delay(delayTime[3]);
     defuseMusic.Play();
     gamePrint.getImage("defusing.png");
-    SDL_Delay(delayTimeIntro5);
+    SDL_Delay(delayTime[4]);
     defuseMusic.Stop();
     openMusic.Stop();
     SDL_RenderClear(Renderer);
@@ -84,7 +80,7 @@ bool aKeyPressed(MathEquation eq) {
     int key;
     unsigned int timeLimit;
     key = 10;
-    timeLimit = 1500;
+    timeLimit = 800;
     while (SDL_GetTicks() - startTime <= timeLimit) {
         if (SDL_PollEvent(&playerInput) != 0 && playerInput.type == SDL_KEYDOWN) {
             if (playerInput.key.keysym.sym == SDLK_LEFT) {

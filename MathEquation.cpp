@@ -9,8 +9,8 @@ MathEquation::MathEquation() {}
 MathEquation::~MathEquation() {}
 
 const void MathEquation::getEquation() {
-    const int maxBound = 15;
-    const int maxDiff = 5;
+    const int maxBound = 10;
+    const int maxDiff = 3;
     srand(time(nullptr));
     int trueOrFalse = rand();
     trueOrFalse = trueOrFalse % 2;
@@ -37,7 +37,7 @@ const void MathEquation::getEquation() {
         if (this->thirdNumber < 0) {
             this->thirdNumber = -this->thirdNumber;
         } else if (this->thirdNumber == this->firstNumber + this->secondNumber) {
-            this->thirdNumber += 3;
+            this->thirdNumber += (rand() % maxDiff);
         }
     }
 }
