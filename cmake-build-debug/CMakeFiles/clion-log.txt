@@ -1,4 +1,4 @@
-/snap/clion/175/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/duc/CLionProjects/GameSDL
+/snap/clion/175/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/duc/Game_MIPT_SDL2
 -- The C compiler identification is GNU 7.5.0
 -- The CXX compiler identification is GNU 7.5.0
 -- Detecting C compiler ABI info
@@ -11,6 +11,19 @@
 -- Check for working CXX compiler: /usr/bin/c++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found SDL2: /usr/lib/x86_64-linux-gnu/libSDL2.so;-lpthread  
+-- Found SDL2_image: /usr/lib/x86_64-linux-gnu/libSDL2_image.so  
+-- Found SDL2_ttf: /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so (found version "2.0.14") 
+-- Found SDL2_mixer: /usr/lib/x86_64-linux-gnu/libSDL2_mixer.so (found version "2.0.2") 
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/duc/CLionProjects/GameSDL/cmake-build-debug
+-- Build files have been written to: /home/duc/Game_MIPT_SDL2/cmake-build-debug

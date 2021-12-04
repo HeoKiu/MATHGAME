@@ -1,3 +1,3 @@
-/home/duc/CLionProjects/GameSDL/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/duc/CLionProjects/GameSDL/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/duc/CLionProjects/GameSDL/cmake-build-debug/CMakeFiles/GameSDL.dir
+/home/duc/Game_MIPT_SDL2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/duc/Game_MIPT_SDL2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/duc/Game_MIPT_SDL2/cmake-build-debug/CMakeFiles/GameSDL.dir

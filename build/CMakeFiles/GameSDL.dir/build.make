@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/duc/CLionProjects/GameSDL
+CMAKE_SOURCE_DIR = /home/duc/Game_MIPT_SDL2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/duc/CLionProjects/GameSDL/build
+CMAKE_BINARY_DIR = /home/duc/Game_MIPT_SDL2/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/GameSDL.dir/depend.make
@@ -57,42 +57,42 @@ include CMakeFiles/GameSDL.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/GameSDL.dir/flags.make
 
-CMakeFiles/GameSDL.dir/main.cpp.o: CMakeFiles/GameSDL.dir/flags.make
-CMakeFiles/GameSDL.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duc/CLionProjects/GameSDL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameSDL.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameSDL.dir/main.cpp.o -c /home/duc/CLionProjects/GameSDL/main.cpp
+CMakeFiles/GameSDL.dir/Game.cpp.o: CMakeFiles/GameSDL.dir/flags.make
+CMakeFiles/GameSDL.dir/Game.cpp.o: ../Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duc/Game_MIPT_SDL2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameSDL.dir/Game.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameSDL.dir/Game.cpp.o -c /home/duc/Game_MIPT_SDL2/Game.cpp
 
-CMakeFiles/GameSDL.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameSDL.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duc/CLionProjects/GameSDL/main.cpp > CMakeFiles/GameSDL.dir/main.cpp.i
+CMakeFiles/GameSDL.dir/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameSDL.dir/Game.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duc/Game_MIPT_SDL2/Game.cpp > CMakeFiles/GameSDL.dir/Game.cpp.i
 
-CMakeFiles/GameSDL.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameSDL.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duc/CLionProjects/GameSDL/main.cpp -o CMakeFiles/GameSDL.dir/main.cpp.s
+CMakeFiles/GameSDL.dir/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameSDL.dir/Game.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duc/Game_MIPT_SDL2/Game.cpp -o CMakeFiles/GameSDL.dir/Game.cpp.s
 
-CMakeFiles/GameSDL.dir/main.cpp.o.requires:
+CMakeFiles/GameSDL.dir/Game.cpp.o.requires:
 
-.PHONY : CMakeFiles/GameSDL.dir/main.cpp.o.requires
+.PHONY : CMakeFiles/GameSDL.dir/Game.cpp.o.requires
 
-CMakeFiles/GameSDL.dir/main.cpp.o.provides: CMakeFiles/GameSDL.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/GameSDL.dir/main.cpp.o.provides
+CMakeFiles/GameSDL.dir/Game.cpp.o.provides: CMakeFiles/GameSDL.dir/Game.cpp.o.requires
+	$(MAKE) -f CMakeFiles/GameSDL.dir/build.make CMakeFiles/GameSDL.dir/Game.cpp.o.provides.build
+.PHONY : CMakeFiles/GameSDL.dir/Game.cpp.o.provides
 
-CMakeFiles/GameSDL.dir/main.cpp.o.provides.build: CMakeFiles/GameSDL.dir/main.cpp.o
+CMakeFiles/GameSDL.dir/Game.cpp.o.provides.build: CMakeFiles/GameSDL.dir/Game.cpp.o
 
 
 CMakeFiles/GameSDL.dir/MathEquation.cpp.o: CMakeFiles/GameSDL.dir/flags.make
 CMakeFiles/GameSDL.dir/MathEquation.cpp.o: ../MathEquation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duc/CLionProjects/GameSDL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameSDL.dir/MathEquation.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameSDL.dir/MathEquation.cpp.o -c /home/duc/CLionProjects/GameSDL/MathEquation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duc/Game_MIPT_SDL2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameSDL.dir/MathEquation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameSDL.dir/MathEquation.cpp.o -c /home/duc/Game_MIPT_SDL2/MathEquation.cpp
 
 CMakeFiles/GameSDL.dir/MathEquation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameSDL.dir/MathEquation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duc/CLionProjects/GameSDL/MathEquation.cpp > CMakeFiles/GameSDL.dir/MathEquation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duc/Game_MIPT_SDL2/MathEquation.cpp > CMakeFiles/GameSDL.dir/MathEquation.cpp.i
 
 CMakeFiles/GameSDL.dir/MathEquation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameSDL.dir/MathEquation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duc/CLionProjects/GameSDL/MathEquation.cpp -o CMakeFiles/GameSDL.dir/MathEquation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duc/Game_MIPT_SDL2/MathEquation.cpp -o CMakeFiles/GameSDL.dir/MathEquation.cpp.s
 
 CMakeFiles/GameSDL.dir/MathEquation.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/GameSDL.dir/MathEquation.cpp.o.provides.build: CMakeFiles/GameSDL.dir
 
 CMakeFiles/GameSDL.dir/Drawer.cpp.o: CMakeFiles/GameSDL.dir/flags.make
 CMakeFiles/GameSDL.dir/Drawer.cpp.o: ../Drawer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duc/CLionProjects/GameSDL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameSDL.dir/Drawer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameSDL.dir/Drawer.cpp.o -c /home/duc/CLionProjects/GameSDL/Drawer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duc/Game_MIPT_SDL2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameSDL.dir/Drawer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameSDL.dir/Drawer.cpp.o -c /home/duc/Game_MIPT_SDL2/Drawer.cpp
 
 CMakeFiles/GameSDL.dir/Drawer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameSDL.dir/Drawer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duc/CLionProjects/GameSDL/Drawer.cpp > CMakeFiles/GameSDL.dir/Drawer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duc/Game_MIPT_SDL2/Drawer.cpp > CMakeFiles/GameSDL.dir/Drawer.cpp.i
 
 CMakeFiles/GameSDL.dir/Drawer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameSDL.dir/Drawer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duc/CLionProjects/GameSDL/Drawer.cpp -o CMakeFiles/GameSDL.dir/Drawer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duc/Game_MIPT_SDL2/Drawer.cpp -o CMakeFiles/GameSDL.dir/Drawer.cpp.s
 
 CMakeFiles/GameSDL.dir/Drawer.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/GameSDL.dir/Drawer.cpp.o.provides.build: CMakeFiles/GameSDL.dir/Drawe
 
 CMakeFiles/GameSDL.dir/Music.cpp.o: CMakeFiles/GameSDL.dir/flags.make
 CMakeFiles/GameSDL.dir/Music.cpp.o: ../Music.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duc/CLionProjects/GameSDL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GameSDL.dir/Music.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameSDL.dir/Music.cpp.o -c /home/duc/CLionProjects/GameSDL/Music.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/duc/Game_MIPT_SDL2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GameSDL.dir/Music.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameSDL.dir/Music.cpp.o -c /home/duc/Game_MIPT_SDL2/Music.cpp
 
 CMakeFiles/GameSDL.dir/Music.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameSDL.dir/Music.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duc/CLionProjects/GameSDL/Music.cpp > CMakeFiles/GameSDL.dir/Music.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/duc/Game_MIPT_SDL2/Music.cpp > CMakeFiles/GameSDL.dir/Music.cpp.i
 
 CMakeFiles/GameSDL.dir/Music.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameSDL.dir/Music.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duc/CLionProjects/GameSDL/Music.cpp -o CMakeFiles/GameSDL.dir/Music.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/duc/Game_MIPT_SDL2/Music.cpp -o CMakeFiles/GameSDL.dir/Music.cpp.s
 
 CMakeFiles/GameSDL.dir/Music.cpp.o.requires:
 
@@ -155,7 +155,7 @@ CMakeFiles/GameSDL.dir/Music.cpp.o.provides.build: CMakeFiles/GameSDL.dir/Music.
 
 # Object files for target GameSDL
 GameSDL_OBJECTS = \
-"CMakeFiles/GameSDL.dir/main.cpp.o" \
+"CMakeFiles/GameSDL.dir/Game.cpp.o" \
 "CMakeFiles/GameSDL.dir/MathEquation.cpp.o" \
 "CMakeFiles/GameSDL.dir/Drawer.cpp.o" \
 "CMakeFiles/GameSDL.dir/Music.cpp.o"
@@ -163,7 +163,7 @@ GameSDL_OBJECTS = \
 # External object files for target GameSDL
 GameSDL_EXTERNAL_OBJECTS =
 
-GameSDL: CMakeFiles/GameSDL.dir/main.cpp.o
+GameSDL: CMakeFiles/GameSDL.dir/Game.cpp.o
 GameSDL: CMakeFiles/GameSDL.dir/MathEquation.cpp.o
 GameSDL: CMakeFiles/GameSDL.dir/Drawer.cpp.o
 GameSDL: CMakeFiles/GameSDL.dir/Music.cpp.o
@@ -174,7 +174,7 @@ GameSDL: /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so
 GameSDL: /usr/lib/x86_64-linux-gnu/libSDL2.so
 GameSDL: /usr/lib/x86_64-linux-gnu/libSDL2main.a
 GameSDL: CMakeFiles/GameSDL.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/duc/CLionProjects/GameSDL/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable GameSDL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/duc/Game_MIPT_SDL2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable GameSDL"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GameSDL.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -182,7 +182,7 @@ CMakeFiles/GameSDL.dir/build: GameSDL
 
 .PHONY : CMakeFiles/GameSDL.dir/build
 
-CMakeFiles/GameSDL.dir/requires: CMakeFiles/GameSDL.dir/main.cpp.o.requires
+CMakeFiles/GameSDL.dir/requires: CMakeFiles/GameSDL.dir/Game.cpp.o.requires
 CMakeFiles/GameSDL.dir/requires: CMakeFiles/GameSDL.dir/MathEquation.cpp.o.requires
 CMakeFiles/GameSDL.dir/requires: CMakeFiles/GameSDL.dir/Drawer.cpp.o.requires
 CMakeFiles/GameSDL.dir/requires: CMakeFiles/GameSDL.dir/Music.cpp.o.requires
@@ -194,6 +194,6 @@ CMakeFiles/GameSDL.dir/clean:
 .PHONY : CMakeFiles/GameSDL.dir/clean
 
 CMakeFiles/GameSDL.dir/depend:
-	cd /home/duc/CLionProjects/GameSDL/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/duc/CLionProjects/GameSDL /home/duc/CLionProjects/GameSDL /home/duc/CLionProjects/GameSDL/build /home/duc/CLionProjects/GameSDL/build /home/duc/CLionProjects/GameSDL/build/CMakeFiles/GameSDL.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/duc/Game_MIPT_SDL2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/duc/Game_MIPT_SDL2 /home/duc/Game_MIPT_SDL2 /home/duc/Game_MIPT_SDL2/build /home/duc/Game_MIPT_SDL2/build /home/duc/Game_MIPT_SDL2/build/CMakeFiles/GameSDL.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/GameSDL.dir/depend
 

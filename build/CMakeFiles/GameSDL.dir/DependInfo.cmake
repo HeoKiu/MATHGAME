@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/duc/CLionProjects/GameSDL/MathEquation.cpp" "/home/duc/CLionProjects/GameSDL/build/CMakeFiles/GameSDL.dir/MathEquation.cpp.o"
-  "/home/duc/CLionProjects/GameSDL/Sound.cpp" "/home/duc/CLionProjects/GameSDL/build/CMakeFiles/GameSDL.dir/Sound.cpp.o"
-  "/home/duc/CLionProjects/GameSDL/drawer.cpp" "/home/duc/CLionProjects/GameSDL/build/CMakeFiles/GameSDL.dir/drawer.cpp.o"
-  "/home/duc/CLionProjects/GameSDL/main.cpp" "/home/duc/CLionProjects/GameSDL/build/CMakeFiles/GameSDL.dir/main.cpp.o"
+  "/home/duc/Game_MIPT_SDL2/Drawer.cpp" "/home/duc/Game_MIPT_SDL2/build/CMakeFiles/GameSDL.dir/Drawer.cpp.o"
+  "/home/duc/Game_MIPT_SDL2/Game.cpp" "/home/duc/Game_MIPT_SDL2/build/CMakeFiles/GameSDL.dir/Game.cpp.o"
+  "/home/duc/Game_MIPT_SDL2/MathEquation.cpp" "/home/duc/Game_MIPT_SDL2/build/CMakeFiles/GameSDL.dir/MathEquation.cpp.o"
+  "/home/duc/Game_MIPT_SDL2/Music.cpp" "/home/duc/Game_MIPT_SDL2/build/CMakeFiles/GameSDL.dir/Music.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
