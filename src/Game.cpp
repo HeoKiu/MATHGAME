@@ -1,10 +1,9 @@
-#include "Drawer.h"
-#include "MathEquation.h"
-#include "Music.h"
+#include "../include/Drawer.h"
+#include "../include//MathEquation.h"
+#include "../include//Music.h"
 #include <SDL.h>
 #include <SDL2/SDL_mixer.h>
 #include <iostream>
-#include <sstream>
 #include <vector>
 
 SDL_Window *Window;
@@ -206,4 +205,9 @@ void gameOver(int point) {
     SDL_DestroyRenderer(Renderer);
     SDL_DestroyWindow(Window);
     SDL_Quit();
+}
+int main() {
+    gamePrint.initWindow();
+    printMenu();
+    return 0;
 }

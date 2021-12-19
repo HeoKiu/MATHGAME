@@ -1,5 +1,5 @@
 
-#include "Drawer.h"
+#include "../include/Drawer.h"
 #include <SDL.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_mixer.h>
