@@ -1,3 +1,0 @@
-/home/duc/Game_MIPT_SDL2/build/CMakeFiles/rebuild_cache.dir
-/home/duc/Game_MIPT_SDL2/build/CMakeFiles/GameSDL.dir
-/home/duc/Game_MIPT_SDL2/build/CMakeFiles/edit_cache.dir
