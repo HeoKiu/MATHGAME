@@ -3,10 +3,10 @@
 #include <cstdlib>
 #include <ctime>
 
-
 MathEquation::MathEquation() {}
 
 MathEquation::~MathEquation() {}
+
 
 const void MathEquation::getEquation() {
     const int max_bound = 10;

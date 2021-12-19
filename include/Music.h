@@ -11,10 +11,10 @@ public:
     void Play();
     void Stop();
 private:
-    SDL_AudioSpec wavSpec;
-    Uint32 wavLength;
-    Uint8 *audioBuf;
-    SDL_AudioDeviceID audioDeviceId;
+    SDL_AudioSpec wav_spec_;
+    Uint32 wav_length_;
+    Uint8 *audio_buf_;
+    SDL_AudioDeviceID audio_device_id_;
 };
 
 

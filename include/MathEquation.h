@@ -6,6 +6,7 @@
 #include <cstring>
 #include <string>
 #include <sstream>
+#include <SDL2/SDL.h>
 
 class MathEquation {
 public:
@@ -16,6 +17,12 @@ public:
     int thirdNumber;
     virtual ~MathEquation();
     const void getEquation();
+    void setValue(int first, int second, int third){
+        firstNumber = first;
+        secondNumber = second;
+        thirdNumber = third;
+    } ;
+
 };
 
 
