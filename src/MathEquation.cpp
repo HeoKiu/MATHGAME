@@ -9,35 +9,35 @@ MathEquation::MathEquation() {}
 MathEquation::~MathEquation() {}
 
 const void MathEquation::getEquation() {
-    const int maxBound = 10;
-    const int maxDiff = 3;
+    const int max_bound = 10;
+    const int max_diff = 3;
     srand(time(nullptr));
-    int trueOrFalse = rand();
-    trueOrFalse = trueOrFalse % 2;
-    if (trueOrFalse) {
+    int true_or_false = rand();
+    true_or_false = true_or_false % 2;
+    if (true_or_false == 1) {
         this->key_ = 'Y';
     } else {
         this->key_ = 'N';
     }
     int diff;
-    diff = rand() % (maxDiff) + 1;
-    int plusOrMinus = rand() % (2);
-    if (plusOrMinus) {
-        plusOrMinus = 1;
+    diff = rand() % (max_diff) + 1;
+    int plus_or_minus = rand() % (2);
+    if (plus_or_minus == 1) {
+        plus_or_minus = 1;
     } else {
-        plusOrMinus = -1;
+        plus_or_minus = -1;
     }
-    diff *= plusOrMinus;
-    this->firstNumber = rand() % (maxBound) + 1;
-    this->secondNumber = rand() % (maxBound) + 1;
-    if (trueOrFalse) {
+    diff *= plus_or_minus;
+    this->firstNumber = rand() % (max_bound) + 1;
+    this->secondNumber = rand() % (max_bound) + 1;
+    if (true_or_false == 1) {
         this->thirdNumber = this->firstNumber + this->secondNumber;
     } else {
         this->thirdNumber = this->firstNumber + this->secondNumber + diff;
         if (this->thirdNumber < 0) {
             this->thirdNumber = -this->thirdNumber;
         } else if (this->thirdNumber == this->firstNumber + this->secondNumber) {
-            this->thirdNumber += (rand() % maxDiff);
+            this->thirdNumber += (rand() % max_diff);
         }
     }
 }

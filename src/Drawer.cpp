@@ -8,13 +8,13 @@
 #include <iostream>
 
 
-Drawer::Drawer(SDL_Window *Window, SDL_Renderer *Renderer) {
-    Window_ = Window;
-    Renderer_ = Renderer;
+Drawer::Drawer(SDL_Window *window, SDL_Renderer *renderer) {
+    Window_ = window;
+    Renderer_ = renderer;
 }
 
 void Drawer::initWindow() {
-    SDL_Init(SDL_INIT_EVERYTHING | SDL_INIT_AUDIO);
+    SDL_Init(SDL_INIT_EVERYTHING);
     TTF_Init();
     IMG_Init(IMG_INIT_PNG);
     Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
@@ -23,28 +23,28 @@ void Drawer::initWindow() {
 }
 
 void Drawer::getImage(std::string const path) {
-    SDL_Texture *newTexture;
-    SDL_Surface *loadedImgSurface = IMG_Load(path.c_str());
-    newTexture = SDL_CreateTextureFromSurface(Renderer_, loadedImgSurface);
-    SDL_FreeSurface(loadedImgSurface);
+    SDL_Texture *new_texture;
+    SDL_Surface *loaded_img_surface = IMG_Load(path.c_str());
+    new_texture = SDL_CreateTextureFromSurface(Renderer_, loaded_img_surface);
+    SDL_FreeSurface(loaded_img_surface);
     SDL_RenderClear(Renderer_);
-    SDL_RenderCopy(Renderer_, newTexture, nullptr, nullptr);
+    SDL_RenderCopy(Renderer_, new_texture, nullptr, nullptr);
     SDL_RenderPresent(Renderer_);
 }
 
-void Drawer::getButton(std::string const path, size_t xCoorinate, size_t yCoordinate, size_t wCoordinate, size_t hCoordinate) {
-    SDL_Texture *NewTexture;
-    SDL_Surface *loadedImgSurface = IMG_Load(path.c_str());
-    NewTexture = SDL_CreateTextureFromSurface(Renderer_, loadedImgSurface);
-    SDL_Rect viewPort;
-    viewPort.x = xCoorinate;
-    viewPort.y = yCoordinate;
-    viewPort.w = wCoordinate;
-    viewPort.h = hCoordinate;
-    SDL_RenderSetViewport(Renderer_, &viewPort);
-    SDL_RenderCopy(Renderer_, NewTexture, nullptr, nullptr);
+void Drawer::getButton(std::string const path, size_t x_coordinate, size_t y_coordinate, size_t w_coordinate, size_t h_coordinate) {
+    SDL_Texture *new_texture;
+    SDL_Surface *loaded_img_surface = IMG_Load(path.c_str());
+    new_texture = SDL_CreateTextureFromSurface(Renderer_, loaded_img_surface);
+    SDL_Rect view_port;
+    view_port.x = x_coordinate;
+    view_port.y = y_coordinate;
+    view_port.w = w_coordinate;
+    view_port.h = h_coordinate;
+    SDL_RenderSetViewport(Renderer_, &view_port);
+    SDL_RenderCopy(Renderer_, new_texture, nullptr, nullptr);
     SDL_RenderPresent(Renderer_);
-    SDL_FreeSurface(loadedImgSurface);
+    SDL_FreeSurface(loaded_img_surface);
 }
 
 void Drawer::printEquation(std::string const eq) {
@@ -54,11 +54,11 @@ void Drawer::printEquation(std::string const eq) {
                                                 eq.c_str(), color);
     SDL_Texture *texture = SDL_CreateTextureFromSurface(Renderer_,
                                                         surface);
-    int texW = 0;
-    int texH = 0;
-    SDL_QueryTexture(texture, nullptr, nullptr, &texW, &texH);
-    SDL_Rect dstrect = {65, 250, texW, texH};
-    SDL_RenderCopy(Renderer_, texture, nullptr, &dstrect);
+    int tex_w = 0;
+    int tex_h = 0;
+    SDL_QueryTexture(texture, nullptr, nullptr, &tex_w, &tex_h);
+    SDL_Rect rect = {65, 250, tex_w, tex_h};
+    SDL_RenderCopy(Renderer_, texture, nullptr, &rect);
     SDL_RenderPresent(Renderer_);
     SDL_DestroyTexture(texture);
     SDL_FreeSurface(surface);
@@ -71,25 +71,25 @@ void Drawer::printScore(std::string point) {
                                                 point.c_str(), color);
     SDL_Texture *texture = SDL_CreateTextureFromSurface(Renderer_,
                                                         surface);
-    const int scoreX = 165;
-    const int scoreY = 85;
-    int texW = 0;
-    int texH = 0;
-    SDL_QueryTexture(texture, nullptr, nullptr, &texW, &texH);
-    SDL_Rect dstrect = {scoreX, scoreY, texW, texH};
-    SDL_RenderCopy(Renderer_, texture, nullptr, &dstrect);
+    const int score_x = 165;
+    const int score_y = 85;
+    int tex_w = 0;
+    int tex_h = 0;
+    SDL_QueryTexture(texture, nullptr, nullptr, &tex_w, &tex_h);
+    SDL_Rect rect = {score_x, score_y, tex_w, tex_h};
+    SDL_RenderCopy(Renderer_, texture, nullptr, &rect);
     SDL_RenderPresent(Renderer_);
     SDL_DestroyTexture(texture);
     SDL_FreeSurface(surface);
 }
 
 void Drawer::clearRender() {
-    SDL_Rect resetViewPort;
-    resetViewPort.x = 0;
-    resetViewPort.y = 0;
-    resetViewPort.w = 400;
-    resetViewPort.h = 10;
-    SDL_RenderSetViewport(Renderer_, &resetViewPort);
+    SDL_Rect reset_view_port;
+    reset_view_port.x = 0;
+    reset_view_port.y = 0;
+    reset_view_port.w = 400;
+    reset_view_port.h = 10;
+    SDL_RenderSetViewport(Renderer_, &reset_view_port);
 }
 
 void Drawer::resetAfterARound() {
