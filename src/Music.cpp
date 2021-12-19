@@ -1,5 +1,5 @@
 
-#include "Music.h"
+#include "../include/Music.h"
 
 Music::~Music() {
     SDL_CloseAudioDevice(audioDeviceId);

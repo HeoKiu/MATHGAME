@@ -1,5 +1,5 @@
 
-#include "MathEquation.h"
+#include "../include/MathEquation.h"
 #include <cstdlib>
 #include <ctime>
 
