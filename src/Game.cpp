@@ -28,9 +28,9 @@ std::string GetStringEquation(MathEquation equation) {
 }
 
 void PrintEq(MathEquation eq) {
-    const size_t delay_time = 500;
     const std::vector<int> wrong_button{30, 400, 165, 145};
     const std::vector<int> right_button{210, 400, 165, 145};
+    const size_t delay_time = 500;
     in_game_music.Load("../sounds/game.wav");
     game_print.getImage("../images/defusing.png");
     in_game_music.Play();
@@ -69,16 +69,13 @@ void Intro() {
     SDL_RenderClear(renderer);
 }
 
-
 bool KeyPressed(MathEquation eq) {
+    size_t key = 10;
+    const size_t time_limit = 800;
     SDL_Event player_input;
     char ans_char = ' ';
     Uint32 start_time = SDL_GetTicks();
     int count_tick = 0;
-    int key;
-    unsigned int time_limit;
-    key = 10;
-    time_limit = 800;
     while (SDL_GetTicks() - start_time <= time_limit) {
         if (SDL_PollEvent(&player_input) != 0 && player_input.type == SDL_KEYDOWN) {
             if (player_input.key.keysym.sym == SDLK_LEFT) {
@@ -166,6 +163,7 @@ void PrintMenu() {
 }
 
 void GameOver(int point) {
+    const size_t sdl_delay = 800;
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
@@ -173,11 +171,11 @@ void GameOver(int point) {
     over_music.Load("../sounds/gameOver.wav");
     over_music.Play();
     game_print.getImage("../images/endGame1.png");
-    SDL_Delay(800);
+    SDL_Delay(sdl_delay);
     game_print.getImage("../images/endGame2.png");
-    SDL_Delay(800);
+    SDL_Delay(sdl_delay);
     game_print.getImage("../images/endGame3.png");
-    SDL_Delay(800);
+    SDL_Delay(sdl_delay);
     game_print.getImage("../images/endGame4.png");
     game_print.printScore(GetPointString(point));
     bool quit = false;
