@@ -32,13 +32,13 @@ void printEq(MathEquation eq) {
     const size_t delayTime = 500;
     const std::vector<int> wrongButton{30, 400, 165, 145};
     const std::vector<int> rightButoon{210, 400, 165, 145};
-    inGameMusic.Load("imgame.wav");
-    gamePrint.getImage("defusing.png");
+    inGameMusic.Load("../sounds/imgame.wav");
+    gamePrint.getImage("../images/defusing.png");
     inGameMusic.Play();
     SDL_Delay(delayTime);
     gamePrint.printEquation(getStringEquation(eq));
-    gamePrint.getButton("wrong.png", wrongButton[0], wrongButton[1], wrongButton[2], wrongButton[3]);
-    gamePrint.getButton("right.png", rightButoon[0], rightButoon[1], rightButoon[2], rightButoon[3]);
+    gamePrint.getButton("../images/wrong.png", wrongButton[0], wrongButton[1], wrongButton[2], wrongButton[3]);
+    gamePrint.getButton("../images/right.png", rightButoon[0], rightButoon[1], rightButoon[2], rightButoon[3]);
     gamePrint.clearRender();
     inGameMusic.Stop();
 }
@@ -47,23 +47,23 @@ void Intro() {
     int numberImages = 8;
     gamePrint.initWindow();
     const std::vector<int> delayTime{100, 500, 250, 1600, 1300};
-    openMusic.Load("planting.wav");
-    defuseMusic.Load("defusing.wav");
+    openMusic.Load("../sounds/planting.wav");
+    defuseMusic.Load("../sounds/defusing.wav");
     openMusic.Play();
     while (numberImages-- > 0) {
-        gamePrint.getImage("introScene1.png");
+        gamePrint.getImage("../images/introScene1.png");
         SDL_Delay(delayTime[0]);
-        gamePrint.getImage("introScene2.png");
+        gamePrint.getImage("../images/introScene2.png");
         SDL_Delay(delayTime[0]);
     }
-    gamePrint.getImage("introScene3.png");
+    gamePrint.getImage("../images/introScene3.png");
     SDL_Delay(delayTime[1]);
-    gamePrint.getImage("introScene4.png");
+    gamePrint.getImage("../images/introScene4.png");
     SDL_Delay(delayTime[2]);
-    gamePrint.getImage("introScene5.png");
+    gamePrint.getImage("../images/introScene5.png");
     SDL_Delay(delayTime[3]);
     defuseMusic.Play();
-    gamePrint.getImage("defusing.png");
+    gamePrint.getImage("../images/defusing.png");
     SDL_Delay(delayTime[4]);
     defuseMusic.Stop();
     openMusic.Stop();
@@ -139,9 +139,9 @@ void startARound(int point) {
 void printMenu() {
     const std::vector<int> startButton{40, 300, 145, 63};
     const std::vector<int> quitButton{210, 300, 145, 62};
-    gamePrint.getImage("menu.png");
-    gamePrint.getButton("startButton.png", startButton[0], startButton[1], startButton[2], startButton[3]);
-    gamePrint.getButton("quitButton.png", quitButton[0], quitButton[1], quitButton[2], quitButton[3]);
+    gamePrint.getImage("../images/menu.png");
+    gamePrint.getButton("../images/startButton.png", startButton[0], startButton[1], startButton[2], startButton[3]);
+    gamePrint.getButton("../images/quitButton.png", quitButton[0], quitButton[1], quitButton[2], quitButton[3]);
     bool quit = false;
     SDL_Event e;
     while (!quit) {
@@ -173,15 +173,15 @@ void gameOver(int point) {
     SDL_DestroyWindow(Window);
     SDL_Quit();
     gamePrint.initWindow();
-    overMusic.Load("gameOver.wav");
+    overMusic.Load("../sounds/gameOver.wav");
     overMusic.Play();
-    gamePrint.getImage("endGame1.png");
+    gamePrint.getImage("../images/endGame1.png");
     SDL_Delay(800);
-    gamePrint.getImage("endGame2.png");
+    gamePrint.getImage("../images/endGame2.png");
     SDL_Delay(800);
-    gamePrint.getImage("endGame3.png");
+    gamePrint.getImage("../images/endGame3.png");
     SDL_Delay(800);
-    gamePrint.getImage("endGame4.png");
+    gamePrint.getImage("../images/endGame4.png");
     gamePrint.printScore(getPointString(point));
     bool quit = false;
     SDL_Event e;

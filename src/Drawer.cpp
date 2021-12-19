@@ -48,7 +48,7 @@ void Drawer::getButton(std::string const path, size_t xCoorinate, size_t yCoordi
 }
 
 void Drawer::printEquation(std::string const eq) {
-    TTF_Font *font = TTF_OpenFont("DoctorSoos.ttf", 84);
+    TTF_Font *font = TTF_OpenFont("../fonts/DoctorSoos.ttf", 84);
     SDL_Color color = {255, 255, 255};
     SDL_Surface *surface = TTF_RenderText_Solid(font,
                                                 eq.c_str(), color);
@@ -65,7 +65,7 @@ void Drawer::printEquation(std::string const eq) {
 }
 
 void Drawer::printScore(std::string point) {
-    TTF_Font *font = TTF_OpenFont("DoctorSoos.ttf", 48);
+    TTF_Font *font = TTF_OpenFont("../fonts/DoctorSoos.ttf", 48);
     SDL_Color color = {141, 136, 117};
     SDL_Surface *surface = TTF_RenderText_Solid(font,
                                                 point.c_str(), color);
