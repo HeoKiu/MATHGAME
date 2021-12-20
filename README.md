@@ -5,7 +5,7 @@ A Game, using C++ and SDL 2.0
 
 A math game
 
-## Requirements
+## Requirements 
 
 You need the following tools to build this project:
 * CMake
@@ -19,11 +19,11 @@ Add clang-tidy to maintain code style, change layout and set up googletest.
 ## Build instructions
 Git clone the project, remember to git clone this branch =)))
 
-You download googletest on Github. After that, create a folder "lib" in the directory and but the googletest there. 
+## Atention
+You should download googletest on Github by yourself. After that, create a folder "lib" in the directory and but the googletest there to make sure it run smoothly. 
 
-Create a new folder "build"
-
-Change the directory to the "Game_MIPT_SDL2" folder:
+## Game instructions
+Change the directory to the "Game_MIPT_SDL2" folder and create a new folder "build":
 ```
 cd build
 ```
