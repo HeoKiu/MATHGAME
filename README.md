@@ -43,6 +43,7 @@ To run the project, type:
 ```
 cd tests
 ```
+```
 ./tests
 ```
 
