@@ -14,7 +14,7 @@ You need the following tools to build this project:
 * googletest
 
 ## What's news?
-Add clang-tidy to maintain code style, change layout and set up googletest.
+Add clang-tidy and clang-format to maintain code style, change layout, put all graphic files and sound files, font files in a place, and set up googletest.
 
 ## Build instructions
 Git clone the project, remember to git clone this branch =)))
