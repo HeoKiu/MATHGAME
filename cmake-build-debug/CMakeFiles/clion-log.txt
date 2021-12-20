@@ -1,4 +1,9 @@
-/snap/clion/175/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/175/bin/ninja/linux/ninja -G Ninja /home/duc/Game_MIPT_SDL2
--- Configuring done
--- Generating done
--- Build files have been written to: /home/duc/Game_MIPT_SDL2/cmake-build-debug
+/snap/clion/175/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/175/bin/ninja/linux/ninja -G Ninja /home/duc/Downloads/Protected-20211220T115553Z-001/Protected
+-- Found Python: /usr/bin/python3.6 (found version "3.6.9") found components: Interpreter 
+CMake Error at CMakeLists.txt:18 (add_subdirectory):
+  add_subdirectory given source "tests" which is not an existing directory.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/duc/Downloads/Protected-20211220T115553Z-001/Protected/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "/home/duc/Downloads/Protected-20211220T115553Z-001/Protected/cmake-build-debug/CMakeFiles/CMakeError.log".

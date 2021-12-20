@@ -1,3 +1,58 @@
-Start testing: Dec 19 19:18 MSK
+Start testing: Dec 20 15:06 MSK
 ----------------------------------------------------------
-End testing: Dec 19 19:18 MSK
+1/1 Testing: check
+1/1 Test: check
+Command: "/home/duc/Downloads/Protected-20211220T115553Z-001/Protected/cmake-build-debug/tests/tests"
+Directory: /home/duc/Downloads/Protected-20211220T115553Z-001/Protected/cmake-build-debug/tests
+"check" start time: Dec 20 15:06 MSK
+Output:
+----------------------------------------------------------
+[==========] Running 7 tests from 7 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from GetPointString
+[ RUN      ] GetPointString.string
+[       OK ] GetPointString.string (0 ms)
+[----------] 1 test from GetPointString (0 ms total)
+
+[----------] 1 test from GetPointString_second
+[ RUN      ] GetPointString_second.string
+[       OK ] GetPointString_second.string (0 ms)
+[----------] 1 test from GetPointString_second (0 ms total)
+
+[----------] 1 test from GetStringEquationTest_1
+[ RUN      ] GetStringEquationTest_1.Equation
+[       OK ] GetStringEquationTest_1.Equation (0 ms)
+[----------] 1 test from GetStringEquationTest_1 (0 ms total)
+
+[----------] 1 test from GetStringEquationTest_2
+[ RUN      ] GetStringEquationTest_2.Equation
+[       OK ] GetStringEquationTest_2.Equation (0 ms)
+[----------] 1 test from GetStringEquationTest_2 (0 ms total)
+
+[----------] 1 test from GetStringEquationTest_3
+[ RUN      ] GetStringEquationTest_3.Equation
+[       OK ] GetStringEquationTest_3.Equation (0 ms)
+[----------] 1 test from GetStringEquationTest_3 (0 ms total)
+
+[----------] 1 test from KeyPressed_2
+[ RUN      ] KeyPressed_2.Equation
+[       OK ] KeyPressed_2.Equation (800 ms)
+[----------] 1 test from KeyPressed_2 (800 ms total)
+
+[----------] 1 test from Time
+[ RUN      ] Time.Equation
+[       OK ] Time.Equation (1602 ms)
+[----------] 1 test from Time (1602 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 7 test suites ran. (2403 ms total)
+[  PASSED  ] 7 tests.
+<end of output>
+Test time =   2.41 sec
+----------------------------------------------------------
+Test Passed.
+"check" end time: Dec 20 15:06 MSK
+"check" time elapsed: 00:00:02
+----------------------------------------------------------
+
+End testing: Dec 20 15:06 MSK

@@ -1,8 +1,4 @@
 
-
-#ifndef GAMESDL_MATHEQUATION_H
-#define GAMESDL_MATHEQUATION_H
-
 #include <cstring>
 #include <string>
 #include <sstream>
@@ -16,7 +12,12 @@ public:
     int thirdNumber;
     virtual ~MathEquation();
     const void getEquation();
+    void setValue(int first, int second, int third){
+        firstNumber = first;
+        secondNumber = second;
+        thirdNumber = third;
+    }
 };
 
 
-#endif//GAMESDL_MATHEQUATION_H
+
