@@ -12,7 +12,13 @@ You need the following tools to build this project:
 * Make 
 * SDL 2.0, SDL2_image, SDL2_ttf, SDL2_mixer (For Debian: `sudo apt-get install libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev`)
 
+## What's news?
+Add clang-tidy to maintain code style, change layout and set up googletest.
+
 ## Build instructions
+First you download googletest on Github. After that, create a folder "lib" in the directory and but the googletest there. 
+
+Create a new folder "build"
 
 Change the directory to the "Game_MIPT_SDL2" folder:
 ```
