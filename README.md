@@ -5,6 +5,9 @@ A Game, using C++ and SDL 2.0
 
 A math game
 
+## Update:
+Change layout, maintain codestyle by adding handmade Clang-tidy =)). Also tests with Googletest
+
 ## Requirements
 
 You need the following tools to build this project:
@@ -15,6 +18,8 @@ You need the following tools to build this project:
 ## Build instructions
 
 Change the directory to the "Game_MIPT_SDL2" folder:
+```
+mkdir build
 ```
 cd build
 ```
