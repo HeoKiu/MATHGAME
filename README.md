@@ -39,4 +39,12 @@ To run the project, type:
 ```
 ./GameSDL
 ```
+## Test instructions
+```
+cd tests
+```
+./tests
+```
+
+
 Have Fun !!!
