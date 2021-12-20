@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/duc/Downloads/Protected-20211220T115553Z-001 (1)/Protected
-BuildDirectory: /home/duc/Downloads/Protected-20211220T115553Z-001 (1)/Protected/cmake-build-debug
+SourceDirectory: /home/duc/Game_MIPT_SDL2
+BuildDirectory: /home/duc/Game_MIPT_SDL2/cmake-build-debug
 
 # Where to place the cost data store
 CostDataFile: 
@@ -20,14 +20,24 @@ BuildName: Linux-c++
 LabelsForSubprojects: 
 
 # Submission information
-SubmitURL: http://
+IsCDash: 
+CDashVersion: 
+QueryCDashVersion: 
+DropSite: 
+DropLocation: 
+DropSiteUser: 
+DropSitePassword: 
+DropSiteMode: 
+DropMethod: http
+TriggerSite: 
+ScpCommand: /usr/bin/scp
 
 # Dashboard start time
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/snap/clion/175/bin/cmake/linux/bin/cmake" "/home/duc/Downloads/Protected-20211220T115553Z-001 (1)/Protected"
-MakeCommand: /snap/clion/175/bin/cmake/linux/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
+ConfigureCommand: "/usr/bin/cmake" "/home/duc/Game_MIPT_SDL2"
+MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
 # version control
@@ -35,11 +45,11 @@ UpdateVersionOnly:
 
 # CVS options
 # Default is "-d -P -A"
-CVSCommand: 
-CVSUpdateOptions: 
+CVSCommand: CVSCOMMAND-NOTFOUND
+CVSUpdateOptions: -d -A -P
 
 # Subversion options
-SVNCommand: 
+SVNCommand: SVNCOMMAND-NOTFOUND
 SVNOptions: 
 SVNUpdateOptions: 
 
@@ -50,7 +60,7 @@ GITUpdateOptions:
 GITUpdateCustom: 
 
 # Perforce options
-P4Command: 
+P4Command: P4COMMAND-NOTFOUND
 P4Client: 
 P4Options: 
 P4UpdateOptions: 
@@ -69,10 +79,6 @@ CompilerVersion: 7.5.0
 PurifyCommand: 
 ValgrindCommand: 
 ValgrindCommandOptions: 
-DrMemoryCommand: 
-DrMemoryCommandOptions: 
-CudaSanitizerCommand: 
-CudaSanitizerCommandOptions: 
 MemoryCheckType: 
 MemoryCheckSanitizerOptions: 
 MemoryCheckCommand: MEMORYCHECK_COMMAND-NOTFOUND
@@ -82,6 +88,10 @@ MemoryCheckSuppressionFile:
 # Coverage
 CoverageCommand: /usr/bin/gcov
 CoverageExtraFlags: -l
+
+# Cluster commands
+SlurmBatchCommand: SLURM_SBATCH_COMMAND-NOTFOUND
+SlurmRunCommand: SLURM_SRUN_COMMAND-NOTFOUND
 
 # Testing options
 # TimeOut is the amount of time in seconds to wait for processes

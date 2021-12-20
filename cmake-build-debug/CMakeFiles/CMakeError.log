@@ -1,51 +1,55 @@
-Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/duc/Downloads/Protected-20211220T115553Z-001 (1)/Protected/cmake-build-debug/CMakeFiles/CMakeTmp
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/duc/Game_MIPT_SDL2/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/snap/clion/175/bin/ninja/linux/ninja cmTC_69e13 && [1/2] Building C object CMakeFiles/cmTC_69e13.dir/src.c.o
-[2/2] Linking C executable cmTC_69e13
-FAILED: cmTC_69e13 
-: && /usr/bin/cc   CMakeFiles/cmTC_69e13.dir/src.c.o -o cmTC_69e13   && :
-CMakeFiles/cmTC_69e13.dir/src.c.o: In function `main':
-src.c:(.text+0x3e): undefined reference to `pthread_create'
-src.c:(.text+0x4a): undefined reference to `pthread_detach'
-src.c:(.text+0x56): undefined reference to `pthread_cancel'
-src.c:(.text+0x67): undefined reference to `pthread_join'
-src.c:(.text+0x7b): undefined reference to `pthread_atfork'
+Run Build Command:"/usr/bin/make" "cmTC_860f2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_860f2.dir/build.make CMakeFiles/cmTC_860f2.dir/build
+make[1]: Entering directory '/home/duc/Game_MIPT_SDL2/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_860f2.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_860f2.dir/CheckSymbolExists.c.o   -c /home/duc/Game_MIPT_SDL2/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_860f2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_860f2.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_860f2.dir/CheckSymbolExists.c.o  -o cmTC_860f2 
+CMakeFiles/cmTC_860f2.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-ninja: build stopped: subcommand failed.
+CMakeFiles/cmTC_860f2.dir/build.make:97: recipe for target 'cmTC_860f2' failed
+make[1]: *** [cmTC_860f2] Error 1
+make[1]: Leaving directory '/home/duc/Game_MIPT_SDL2/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_860f2/fast' failed
+make: *** [cmTC_860f2/fast] Error 2
 
-
-Source file was:
+File /home/duc/Game_MIPT_SDL2/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
 #include <pthread.h>
 
-static void* test_func(void* data)
+int main(int argc, char** argv)
 {
-  return data;
-}
-
-int main(void)
-{
-  pthread_t thread;
-  pthread_create(&thread, NULL, test_func, NULL);
-  pthread_detach(thread);
-  pthread_cancel(thread);
-  pthread_join(thread, NULL);
-  pthread_atfork(NULL, NULL, NULL);
-  pthread_exit(NULL);
-
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
   return 0;
+#endif
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/duc/Downloads/Protected-20211220T115553Z-001 (1)/Protected/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/duc/Game_MIPT_SDL2/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/snap/clion/175/bin/ninja/linux/ninja cmTC_a12da && [1/2] Building C object CMakeFiles/cmTC_a12da.dir/CheckFunctionExists.c.o
-[2/2] Linking C executable cmTC_a12da
-FAILED: cmTC_a12da 
-: && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create  CMakeFiles/cmTC_a12da.dir/CheckFunctionExists.c.o -o cmTC_a12da  -lpthreads && :
+Run Build Command:"/usr/bin/make" "cmTC_55716/fast"
+/usr/bin/make -f CMakeFiles/cmTC_55716.dir/build.make CMakeFiles/cmTC_55716.dir/build
+make[1]: Entering directory '/home/duc/Game_MIPT_SDL2/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_55716.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_55716.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_55716
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55716.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_55716.dir/CheckFunctionExists.c.o  -o cmTC_55716 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-ninja: build stopped: subcommand failed.
-
+CMakeFiles/cmTC_55716.dir/build.make:97: recipe for target 'cmTC_55716' failed
+make[1]: *** [cmTC_55716] Error 1
+make[1]: Leaving directory '/home/duc/Game_MIPT_SDL2/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_55716/fast' failed
+make: *** [cmTC_55716/fast] Error 2
 
 

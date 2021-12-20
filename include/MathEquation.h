@@ -15,8 +15,8 @@ public:
     int secondNumber;
     int thirdNumber;
     virtual ~MathEquation();
-    const void getEquation();
-    void setValue(int first, int second, int third){
+    const void GetEquation();
+    void SetValue(int first, int second, int third){
         firstNumber = first;
         secondNumber = second;
         thirdNumber = third;

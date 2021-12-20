@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/tests.dir/basic.cpp.o CMakeFiles/tests.dir/test.cpp.o  -o tests ../lib/libgtest_main.a -lSDL2 -lpthread -Wl,-Bstatic -lSDL2main ../lib/libgtest.a -Wl,-Bdynamic -lpthread 

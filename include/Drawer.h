@@ -8,24 +8,24 @@
 #include <SDL2/SDL_ttf.h>
 #include <string>
 
-const int SCREEN_WIDTH = 400;
-const int SCREEN_HEIGHT = 600;
-const std::string gameName = "Quick Maths";
+const int kScreenWidth = 400;
+const int kScreenHeight = 600;
+const std::string kGameName = "Quick Maths";
 
 class Drawer {
 private:
-    SDL_Window* Window_;
-    SDL_Renderer* Renderer_;
+    SDL_Window* window_;
+    SDL_Renderer* renderer_;
 public:
-    Drawer(SDL_Window* Window, SDL_Renderer* Renderer);
-    void initWindow();
-    void getImage(std::string const path);
-    void getButton(std::string const path, size_t xCoordinate, size_t yCoordinate, size_t wCoordinate, size_t hCoordinate);
-    void printEquation(std::string const eq);
-    void drawTimeLeft(int beginningWidth);
-    void printScore(std::string const point);
-    void clearRender();
-    void resetAfterARound();
+    Drawer(SDL_Window* window, SDL_Renderer* renderer);
+    void InitWindow();
+    void GetImage(std::string const path);
+    void GetButton(std::string const path, size_t x_coordinate, size_t y_coordinate, size_t w_coordinate, size_t h_coordinate);
+    void PrintEquation(std::string const eq);
+    void DrawTimeLeft(int beginning_width);
+    void PrintScore(std::string const point);
+    void ClearRender();
+    void ResetAfterARound();
 };
 
 #endif//GAMESDL_DRAWER_H

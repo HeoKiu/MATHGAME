@@ -8,7 +8,7 @@ MathEquation::MathEquation() {}
 
 MathEquation::~MathEquation() {}
 
-const void MathEquation::getEquation() {
+const void MathEquation::GetEquation() {
     const int max_bound = 10;
     const int max_diff = 3;
     srand(time(nullptr));
