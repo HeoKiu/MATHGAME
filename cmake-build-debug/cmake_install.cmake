@@ -1,4 +1,4 @@
-# Install script for directory: /home/duc/Game_MIPT_SDL2
+# Install script for directory: /home/duc/Downloads/Protected-20211220T115553Z-001 (1)/Protected
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -42,6 +42,13 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/duc/Downloads/Protected-20211220T115553Z-001 (1)/Protected/cmake-build-debug/lib/googletest/cmake_install.cmake")
+  include("/home/duc/Downloads/Protected-20211220T115553Z-001 (1)/Protected/cmake-build-debug/tests/cmake_install.cmake")
+
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()
@@ -50,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/duc/Game_MIPT_SDL2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/duc/Downloads/Protected-20211220T115553Z-001 (1)/Protected/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
