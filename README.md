@@ -17,7 +17,9 @@ You need the following tools to build this project:
 Add clang-tidy to maintain code style, change layout and set up googletest.
 
 ## Build instructions
-First you download googletest on Github. After that, create a folder "lib" in the directory and but the googletest there. 
+Git clone the project, remember to git clone this branch =)))
+
+You download googletest on Github. After that, create a folder "lib" in the directory and but the googletest there. 
 
 Create a new folder "build"
 
