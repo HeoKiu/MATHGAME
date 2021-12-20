@@ -1,4 +1,0 @@
-Cannot generate into /home/duc/Game_MIPT_SDL2/cmake-build-debug
-It was created with incompatible generator 'Unix Makefiles'
-
-Please either delete it manually or select another generation directory
