@@ -25,7 +25,7 @@ cd build
 ```
 Then start cmake:
 ```
-cmake ..
+cmake .
 ```
 Now run make
 ```
