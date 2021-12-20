@@ -19,20 +19,20 @@ TEST(GetPointString_second, string) {
 }
 TEST(GetStringEquationTest_1, Equation) {
     MathEquation equation;
-    equation.setValue(1,2,3);
+    equation.SetValue(1,2,3);
     EvaluateString temp;
     EXPECT_EQ(temp.GetStringEquation(equation),"1 + 2 = 3");
 }
 TEST(GetStringEquationTest_2, Equation) {
     MathEquation equation;
-    equation.setValue(8,9,17);
+    equation.SetValue(8,9,17);
     EvaluateString temp;
     EXPECT_EQ(temp.GetStringEquation(equation),"8 + 9 = 17");
 }
 
 TEST(GetStringEquationTest_3, Equation) {
     MathEquation equation;
-    equation.setValue(9,9,18);
+    equation.SetValue(9,9,18);
     EvaluateString temp;
     EXPECT_EQ(temp.GetStringEquation(equation),"9 + 9 = 18");
 }

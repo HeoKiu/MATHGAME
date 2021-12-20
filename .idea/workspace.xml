@@ -9,114 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cc54537-bac2-4bae-8f31-cb166ee567dc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-73744b408685928bbcf6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-09ab175f00d234290d8b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-9dee8f0d6e7b84697793.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-lib.googletest-Debug-f566c6626c443d7d0c98.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-lib.googletest.googlemock-Debug-3a42e4cf8588e3f61dbf.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-lib.googletest.googletest-Debug-3f0423f1d162fc1304b0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-tests-Debug-b01f6abb0ab61427ef3b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2021-12-20T12-42-17-0368.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Continuous-Debug-ea6a7c95862cbdbb9c2e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ContinuousBuild-Debug-f676cf13eb58e0bea563.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ContinuousConfigure-Debug-161f869abc0ad00805b3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ContinuousCoverage-Debug-20d7d1f60a27d4b1b648.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ContinuousMemCheck-Debug-8ae099f2a3c63f381a13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ContinuousStart-Debug-1f23d6bd68f1f9b9ee28.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ContinuousSubmit-Debug-98037fb31a10994bb273.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ContinuousTest-Debug-33056c1f8450f4fc68c8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ContinuousUpdate-Debug-72a61e9c29b150cc91b5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Experimental-Debug-af0c2a184b722a652515.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ExperimentalBuild-Debug-00d8b34af12b42e8884a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ExperimentalConfigure-Debug-1fa680caf500c40a9d48.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ExperimentalCoverage-Debug-2f4d6b3615cbbb4b9ea1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ExperimentalMemCheck-Debug-37d63415814b006db67c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ExperimentalStart-Debug-79a394599d33e0973161.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ExperimentalSubmit-Debug-1600ee40d70e8507f6a6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ExperimentalTest-Debug-3ea0bde8f07742b9136c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-ExperimentalUpdate-Debug-eb6d3eeb449151f22365.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-GameSDL-Debug-06c48bbf526487d224cb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Nightly-Debug-13adbfc08604124f02b1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-NightlyBuild-Debug-d72f0249c081225f03c8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-NightlyConfigure-Debug-f84def1e3350e1e4a27a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-NightlyCoverage-Debug-e8ce3c8f29f5405ae23b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-NightlyMemCheck-Debug-4630102507ef9e62fab5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-NightlyMemoryCheck-Debug-ade4f649e0f449eea841.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-NightlyStart-Debug-fae09a83954370b8edfb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-NightlySubmit-Debug-eb081cf3103c47879c24.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-NightlyTest-Debug-b17e82446556e817b87e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-NightlyUpdate-Debug-9c708c7d336ed4fed611.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-gmock-Debug-77fcff41143b1112e1a7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-gmock_main-Debug-fe6e2eee3999facf63e8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-gtest-Debug-9e79a0f04cf8f1a8570f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-gtest_main-Debug-0735a532693d90faaf48.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-tests-Debug-de67ff654398fdd24f9a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-ec6e94d0d30e763f979b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.21.1/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameSDL.dir/src/Drawer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameSDL.dir/src/Drawer.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameSDL.dir/src/Game.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameSDL.dir/src/Game.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameSDL.dir/src/MathEquation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameSDL.dir/src/MathEquation.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameSDL.dir/src/Music.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GameSDL.dir/src/Music.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CTestTestfile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/DartConfiguration.tcl" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/DartConfiguration.tcl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/GameSDL" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/GameSDL" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/CTestCostData.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/CTestTestfile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googlemock/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googlemock/CTestTestfile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googlemock/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googlemock/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googletest/CMakeFiles/Export/lib/cmake/GTest/GTestTargets-debug.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googletest/CMakeFiles/Export/lib/cmake/GTest/GTestTargets.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googletest/CMakeFiles/Export/lib/cmake/GTest/GTestTargets.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googletest/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googletest/CTestTestfile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googletest/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googletest/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googletest/generated/GTestConfigVersion.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/lib/googletest/googletest/generated/GTestConfigVersion.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libgmock_maind.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libgmockd.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libgtest_maind.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lib/libgtestd.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/tests.dir/basic.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/tests.dir/test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/CMakeFiles/tests.dir/test.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/tests/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/CTestTestfile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/tests/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/tests/tests" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tests/tests" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Drawer.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Drawer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/MathEquation.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/MathEquation.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/Music.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Music.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Drawer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Drawer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MathEquation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MathEquation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Music.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Music.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="6cc54537-bac2-4bae-8f31-cb166ee567dc" name="Changes" comment="Delete .idea directory" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,8 +73,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640006188105</updated>
-      <workItem from="1640006192773" duration="1235000" />
+      <workItem from="1640006192773" duration="1524000" />
     </task>
+    <task id="LOCAL-00001" summary="Delete .idea directory">
+      <created>1640007508580</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640007508580</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,5 +101,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="test" />
+    <MESSAGE value="Delete .idea directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete .idea directory" />
   </component>
 </project>
