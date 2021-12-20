@@ -40,6 +40,10 @@ To run the project, type:
 ./GameSDL
 ```
 ## Test instructions
+
+```
+make tests
+```
 ```
 cd tests
 ```
