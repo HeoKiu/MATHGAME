@@ -11,6 +11,7 @@ You need the following tools to build this project:
 * CMake
 * Make 
 * SDL 2.0, SDL2_image, SDL2_ttf, SDL2_mixer (For Debian: `sudo apt-get install libsdl2-dev libsdl2-ttf-dev libsdl2-image-dev libsdl2-mixer-dev`)
+* googletest
 
 ## What's news?
 Add clang-tidy to maintain code style, change layout and set up googletest.
