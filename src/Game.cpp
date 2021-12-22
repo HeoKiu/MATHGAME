@@ -1,19 +1,8 @@
-#include "../include//Music.h"
-#include "../include/Drawer.h"
-#include <SDL.h>
-#include <SDL2/SDL_mixer.h>
-#include <iostream>
-#include <vector>
 
-SDL_Window *window;
-SDL_Renderer *renderer;
-Drawer game_print(window, renderer);
-Music open_music;
-Music over_music;
-Music defuse_music;
-Music in_game_music;
+#include "../include/Game.h"
 
-std::string GetStringEquation(MathEquation equation) {
+
+std::string Game::GetStringEquation(MathEquation equation) {
     std::string final_string;
     std::stringstream second_value;
     std::stringstream first_value;
@@ -26,8 +15,7 @@ std::string GetStringEquation(MathEquation equation) {
     final_string = final_string + " = " + third_value.str();
     return final_string;
 }
-
-void PrintEq(MathEquation eq) {
+void Game::PrintEq(MathEquation eq) {
     const std::vector<int> wrong_button{30, 400, 165, 145};
     const std::vector<int> right_button{210, 400, 165, 145};
     const size_t delay_time = 500;
@@ -41,8 +29,7 @@ void PrintEq(MathEquation eq) {
     game_print.ClearRender();
     in_game_music.Stop();
 }
-
-void Intro() {
+void Game::Intro() {
     int number_images = 8;
     game_print.InitWindow();
     const std::vector<int> delay_time{100, 500, 250, 1600, 1300};
@@ -68,8 +55,7 @@ void Intro() {
     open_music.Stop();
     SDL_RenderClear(renderer);
 }
-
-bool KeyPressed(MathEquation eq) {
+bool Game::KeyPressed(MathEquation eq) {
     size_t key = 10;
     const size_t time_limit = 800;
     SDL_Event player_input;
@@ -95,21 +81,18 @@ bool KeyPressed(MathEquation eq) {
     }
     return ans_char == eq.key_;
 }
-
-std::string GetPointString(int point) {
+std::string Game::GetPointString(int point) {
     std::string final_string;
     std::stringstream ss;
     ss << point;
     final_string = ss.str();
     return final_string;
 }
-
-void GameOver(int point);
-
-bool TimeDiscounting(MathEquation eq) {
+bool Game::TimeDiscounting(MathEquation eq) {
     return KeyPressed(eq);
 }
-void StartARound(int point) {
+
+void Game::StartARound(int point) {
     if (point == 0) {
         Intro();
     } else {
@@ -128,8 +111,7 @@ void StartARound(int point) {
     SDL_DestroyWindow(window);
     SDL_Quit();
 }
-
-void PrintMenu() {
+void Game::PrintMenu() {
     const std::vector<int> start_button{40, 300, 145, 63};
     const std::vector<int> quit_button{210, 300, 145, 62};
     game_print.GetImage("../images/menu.png");
@@ -161,8 +143,7 @@ void PrintMenu() {
     SDL_DestroyWindow(window);
     SDL_Quit();
 }
-
-void GameOver(int point) {
+void Game::GameOver(int point) {
     const size_t sdl_delay = 800;
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
@@ -200,9 +181,4 @@ void GameOver(int point) {
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
     SDL_Quit();
-}
-int main() {
-    game_print.InitWindow();
-    PrintMenu();
-    return 0;
 }

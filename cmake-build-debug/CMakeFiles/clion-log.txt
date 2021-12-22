@@ -1,0 +1,4 @@
+/snap/clion/175/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/175/bin/ninja/linux/ninja -G Ninja /home/duc/Game_MIPT_SDL2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/duc/Game_MIPT_SDL2/cmake-build-debug
